@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "scope": "Technical case analysis and verbatim excerpts",
+  "sha256": {
+    "artifact_excerpts.json": "1be48bf7e08f3d6323b54d2e384d0581a3530957b7e9ee88cc5b718770ff6a32",
+    "cases.md": "acbf832d4bc7557e3e4f767b5f413433cbf52003b1dc7f1fbcc6b1eb4ce38049",
+    "dialogue.jsonl": "3a6aea68986b1e6cb1d48dc383f2dabb86dfee870933c4bb82a8467b5f6b51b6",
+    "dialogue.md": "f365e45189e50395dfcf7677bacf2cfcd6d011cd1f3460bd16ee2315743bfbe0",
+    "provenance.json": "eabb35a8b9ac75d01e700bc6c270fb343786e69823b879c7df6546e85b980564",
+    "readme.md": "cf28664d61a458f15099550775fac2a2b31f34165bdbc1ebf6316a9fc8931efd"
+  },
+  "limit": "Integrity hashes are not third-party authentication."
+}

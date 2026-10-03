@@ -1,0 +1,9 @@
+﻿{
+    "timestamp":  "2026-09-25T17:12:36.3205921+08:00",
+    "port":  "COM9",
+    "baud":  115200,
+    "responses":  309,
+    "expected":  309,
+    "error":  null,
+    "status":  "PASS"
+}

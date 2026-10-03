@@ -1,0 +1,41 @@
+#-----------------------------------------------------------
+# xsim v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Sep 25 16:42:24 2026
+# Process ID: 30304
+# Current directory: E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/sim/work/window_a5
+# Command line: xsim.exe -log E:\biancheng\vscode\Z100\FPGA\fpga_competition_2026\sim\results\detection_a5_unit.log -mode tcl -source {xsim.dir/a5_sim/xsim_script.tcl}
+# Log file: E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/sim/results/detection_a5_unit.log
+# Journal file: E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/sim/work/window_a5\xsim.jou
+# Running On: zhangbo, OS: Windows, CPU Frequency: 2495 MHz, CPU Physical cores: 32, Host memory: 33605 MB
+#-----------------------------------------------------------
+source xsim.dir/a5_sim/xsim_script.tcl
+# xsim {a5_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+UNIT 0/3487 frames
+UNIT 200/3487 frames
+UNIT 400/3487 frames
+UNIT 600/3487 frames
+UNIT 800/3487 frames
+UNIT 1000/3487 frames
+UNIT 1200/3487 frames
+UNIT 1400/3487 frames
+UNIT 1600/3487 frames
+UNIT 1800/3487 frames
+UNIT 2000/3487 frames
+UNIT 2200/3487 frames
+UNIT 2400/3487 frames
+UNIT 2600/3487 frames
+UNIT 2800/3487 frames
+UNIT 3000/3487 frames
+UNIT 3200/3487 frames
+UNIT 3400/3487 frames
+PASS: window multi scanner 3487 frames 3249185 windows 19 error checks; busy protection and reset recovery
+$finish called at time : 4870442860 ns : File "E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/sim/tb_window_multi_accel.sv" Line 112
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:03:47 . Memory (MB): peak = 205.988 ; gain = 0.000
+exit
+INFO: xsimkernel Simulation Memory Usage: 10424 KB (Peak: 10424 KB), Simulation CPU Usage: 226624 ms
+INFO: [Common 17-206] Exiting xsim at Fri Sep 25 16:46:13 2026...

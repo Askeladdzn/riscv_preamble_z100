@@ -1,0 +1,1497 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Sep 25 16:46:08 2026
+# Process ID: 31948
+# Current directory: E:/zynq 资料/【正点原子】Z100 ZYNQ7035 7045 7100开发板资料盘（A盘）/Z100 ZYNQ开发板资料盘（A盘）
+# Command line: vivado.exe -mode batch -log E:\biancheng\vscode\Z100\FPGA\fpga_competition_2026\build\logs\detection_0000A501_cleanbuild.log -journal E:\biancheng\vscode\Z100\FPGA\fpga_competition_2026\build\logs\detection_0000A501_cleanbuild.jou -source E:\biancheng\vscode\Z100\FPGA\fpga_competition_2026\build\clean_a5_20260925_164606\build\build_detection_a5.tcl -tclargs 0000A501
+# Log file: E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/logs/detection_0000A501_cleanbuild.log
+# Journal file: E:\biancheng\vscode\Z100\FPGA\fpga_competition_2026\build\logs\detection_0000A501_cleanbuild.jou
+# Running On: zhangbo, OS: Windows, CPU Frequency: 2495 MHz, CPU Physical cores: 32, Host memory: 33605 MB
+#-----------------------------------------------------------
+source {E:\biancheng\vscode\Z100\FPGA\fpga_competition_2026\build\clean_a5_20260925_164606\build\build_detection_a5.tcl}
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# set version [lindex $argv 0]
+# if {![regexp {^[0-9A-Fa-f]{8}$} $version]} { error "Expected eight hexadecimal build ID digits" }
+# set work [file join $root build work riscv_$version]
+# set reports [file join $root build reports riscv_$version]
+# file mkdir $work
+# file mkdir $reports
+# file copy -force [file join $root build firmware $version firmware.hex] [file join $work firmware.hex]
+# cd $work
+# create_project -force riscv_$version $work -part xc7z100ffg900-2
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/build/work/riscv_0000A501'
+# read_verilog [file join $root third_party picorv32 picorv32.v]
+# foreach name {uart_rx.v uart_tx.v dot_accel.v peak_selector.v window_multi_accel.v riscv_multi_soc.v riscv_top.v} { read_verilog [file join $root src rtl $name] }
+# add_files [file join $work firmware.hex]
+# read_xdc [file join $root board riscv.xdc]
+# synth_design -top riscv_top -part xc7z100ffg900-2
+Command: synth_design -top riscv_top -part xc7z100ffg900-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z100'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z100'
+INFO: [Device 21-403] Loading part xc7z100ffg900-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 40680
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2414.504 ; gain = 409.270
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'riscv_top' [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/src/rtl/riscv_top.v:2]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [E:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:71783]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (0#1) [E:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:71783]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [E:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:80431]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 20.000000 - type: double 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (0#1) [E:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:80431]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [E:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1519]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [E:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1519]
+INFO: [Synth 8-6157] synthesizing module 'riscv_soc' [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/src/rtl/riscv_multi_soc.v:2]
+	Parameter BAUD bound to: 115200 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'firmware.hex' is read successfully [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/src/rtl/riscv_multi_soc.v:36]
+INFO: [Synth 8-6157] synthesizing module 'dot_accel' [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/src/rtl/dot_accel.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'dot_accel' (0#1) [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/src/rtl/dot_accel.v:2]
+INFO: [Synth 8-6157] synthesizing module 'window_multi_accel' [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/src/rtl/window_multi_accel.v:3]
+INFO: [Synth 8-6157] synthesizing module 'peak_selector' [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/src/rtl/peak_selector.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'peak_selector' (0#1) [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/src/rtl/peak_selector.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'window_multi_accel' (0#1) [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/src/rtl/window_multi_accel.v:3]
+INFO: [Synth 8-6157] synthesizing module 'picorv32' [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:62]
+	Parameter ENABLE_COUNTERS bound to: 1'b1 
+	Parameter ENABLE_COUNTERS64 bound to: 1'b1 
+	Parameter BARREL_SHIFTER bound to: 1'b1 
+	Parameter COMPRESSED_ISA bound to: 1'b0 
+	Parameter CATCH_MISALIGN bound to: 1'b1 
+	Parameter CATCH_ILLINSN bound to: 1'b1 
+	Parameter ENABLE_MUL bound to: 1'b1 
+	Parameter ENABLE_FAST_MUL bound to: 1'b0 
+	Parameter ENABLE_DIV bound to: 1'b1 
+	Parameter ENABLE_IRQ bound to: 1'b0 
+	Parameter PROGADDR_RESET bound to: 0 - type: integer 
+	Parameter STACKADDR bound to: 65536 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'picorv32_pcpi_mul' [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:2197]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:2228]
+INFO: [Synth 8-6155] done synthesizing module 'picorv32_pcpi_mul' (0#1) [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:2197]
+INFO: [Synth 8-6157] synthesizing module 'picorv32_pcpi_div' [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:2420]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:2445]
+INFO: [Synth 8-6155] done synthesizing module 'picorv32_pcpi_div' (0#1) [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:2420]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:331]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1314]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1314]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1497]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1497]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1583]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1583]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1583]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1583]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1583]
+INFO: [Synth 8-6155] done synthesizing module 'picorv32' (0#1) [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:62]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/src/rtl/uart_rx.v:2]
+	Parameter CLK_HZ bound to: 50000000 - type: integer 
+	Parameter BAUD bound to: 115200 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (0#1) [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/src/rtl/uart_rx.v:2]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/src/rtl/uart_tx.v:2]
+	Parameter CLK_HZ bound to: 50000000 - type: integer 
+	Parameter BAUD bound to: 115200 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/src/rtl/uart_tx.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_soc' (0#1) [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/src/rtl/riscv_multi_soc.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_top' (0#1) [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/src/rtl/riscv_top.v:2]
+WARNING: [Synth 8-6014] Unused sequential element pcpi_ready_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:2309]
+WARNING: [Synth 8-6014] Unused sequential element pcpi_wr_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:2466]
+WARNING: [Synth 8-6014] Unused sequential element mem_la_firstword_reg_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:392]
+WARNING: [Synth 8-6014] Unused sequential element last_mem_valid_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:393]
+WARNING: [Synth 8-6014] Unused sequential element next_insn_opcode_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:433]
+WARNING: [Synth 8-6014] Unused sequential element mem_la_secondword_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:571]
+WARNING: [Synth 8-6014] Unused sequential element prefetched_high_word_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:572]
+WARNING: [Synth 8-6014] Unused sequential element q_ascii_instr_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:779]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_imm_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:780]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_opcode_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:781]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_rs1_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:782]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_rs2_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:783]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_rd_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:784]
+WARNING: [Synth 8-6014] Unused sequential element dbg_next_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:785]
+WARNING: [Synth 8-6014] Unused sequential element dbg_valid_insn_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:788]
+WARNING: [Synth 8-6014] Unused sequential element cached_ascii_instr_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:793]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_imm_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:794]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_opcode_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:796]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_rs1_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:799]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_rs2_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:800]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_rd_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:801]
+WARNING: [Synth 8-6014] Unused sequential element dbg_insn_addr_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:805]
+WARNING: [Synth 8-6014] Unused sequential element is_sll_srl_sra_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1110]
+WARNING: [Synth 8-6014] Unused sequential element clear_prefetched_high_word_q_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1293]
+WARNING: [Synth 8-6014] Unused sequential element set_mem_do_rinst_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1406]
+WARNING: [Synth 8-6014] Unused sequential element set_mem_do_rdata_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1407]
+WARNING: [Synth 8-6014] Unused sequential element set_mem_do_wdata_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1408]
+WARNING: [Synth 8-6014] Unused sequential element alu_out_0_q_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1410]
+WARNING: [Synth 8-6014] Unused sequential element alu_wait_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1413]
+WARNING: [Synth 8-6014] Unused sequential element alu_wait_2_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1414]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs1val_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1417]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs2val_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1418]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs1val_valid_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1419]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs2val_valid_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1420]
+WARNING: [Synth 8-6014] Unused sequential element next_irq_pending_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1440]
+WARNING: [Synth 8-6014] Unused sequential element decoder_trigger_q_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1447]
+WARNING: [Synth 8-6014] Unused sequential element decoder_pseudo_trigger_q_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1449]
+WARNING: [Synth 8-6014] Unused sequential element latched_trace_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1465]
+WARNING: [Synth 8-6014] Unused sequential element irq_active_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1471]
+WARNING: [Synth 8-6014] Unused sequential element irq_delay_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1472]
+WARNING: [Synth 8-6014] Unused sequential element irq_mask_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1473]
+WARNING: [Synth 8-6014] Unused sequential element irq_state_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1475]
+WARNING: [Synth 8-6014] Unused sequential element timer_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1477]
+WARNING: [Synth 8-6014] Unused sequential element current_pc_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1495]
+WARNING: [Synth 8-6014] Unused sequential element irq_pending_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1963]
+WARNING: [Synth 8-6014] Unused sequential element trace_valid_reg was removed.  [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/third_party/picorv32/picorv32.v:1452]
+WARNING: [Synth 8-7129] Port pcpi_insn[24] in module picorv32_pcpi_div is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[23] in module picorv32_pcpi_div is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[22] in module picorv32_pcpi_div is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[21] in module picorv32_pcpi_div is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[20] in module picorv32_pcpi_div is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[19] in module picorv32_pcpi_div is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[18] in module picorv32_pcpi_div is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[17] in module picorv32_pcpi_div is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[16] in module picorv32_pcpi_div is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[15] in module picorv32_pcpi_div is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[11] in module picorv32_pcpi_div is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[10] in module picorv32_pcpi_div is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[9] in module picorv32_pcpi_div is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[8] in module picorv32_pcpi_div is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[7] in module picorv32_pcpi_div is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[24] in module picorv32_pcpi_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[23] in module picorv32_pcpi_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[22] in module picorv32_pcpi_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[21] in module picorv32_pcpi_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[20] in module picorv32_pcpi_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[19] in module picorv32_pcpi_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[18] in module picorv32_pcpi_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[17] in module picorv32_pcpi_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[16] in module picorv32_pcpi_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[15] in module picorv32_pcpi_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[11] in module picorv32_pcpi_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[10] in module picorv32_pcpi_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[9] in module picorv32_pcpi_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[8] in module picorv32_pcpi_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_insn[7] in module picorv32_pcpi_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_wr in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[31] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[30] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[29] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[28] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[27] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[26] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[25] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[24] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[23] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[22] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[21] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[20] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[19] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[18] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[17] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[16] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[15] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[14] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[13] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[12] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[11] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[10] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[9] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[8] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[7] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[6] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[5] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[4] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[3] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[2] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[1] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_rd[0] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_wait in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pcpi_ready in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[31] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[30] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[29] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[28] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[27] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[26] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[25] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[24] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[23] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[22] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[21] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[20] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[19] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[18] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[17] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[16] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[15] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[14] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[13] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[12] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[11] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[10] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[9] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[8] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[7] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[6] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[5] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[4] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[3] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[2] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[1] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port irq[0] in module picorv32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port energy[31] in module peak_selector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port energy[30] in module peak_selector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port energy[29] in module peak_selector is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2561.172 ; gain = 555.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2576.871 ; gain = 571.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2576.871 ; gain = 571.637
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 2588.887 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/board/riscv.xdc]
+Finished Parsing XDC File [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/board/riscv.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/board/riscv.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/riscv_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/riscv_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2694.578 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2694.578 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2694.578 ; gain = 689.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z100ffg900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2694.578 ; gain = 689.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2694.578 ; gain = 689.344
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'peak_selector'
+INFO: [Synth 8-802] inferred FSM for state register 'mem_state_reg' in module 'picorv32'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
+WARNING: [Synth 8-6841] Block RAM (a_mem_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
+(byte width (1) is not a multiple of 8(data_only) or 9(data + parity))
+WARNING: [Synth 8-6841] Block RAM (b_mem_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
+(byte width (1) is not a multiple of 8(data_only) or 9(data + parity))
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               00
+                 iSTATE0 |                             0010 |                               01
+                 iSTATE1 |                             0100 |                               10
+                 iSTATE2 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'peak_selector'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                               00 |                               00
+                 iSTATE0 |                               01 |                               10
+                  iSTATE |                               10 |                               01
+                 iSTATE1 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'mem_state_reg' using encoding 'sequential' in module 'picorv32'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+                   START |                              001 |                              001
+                    DATA |                              010 |                              010
+                    STOP |                              011 |                              011
+               WAIT_HIGH |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2694.578 ; gain = 689.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 1     
+	   2 Input   63 Bit       Adders := 1     
+	   3 Input   33 Bit       Adders := 4     
+	   2 Input   32 Bit       Adders := 17    
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   18 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 4     
+	   2 Input   10 Bit       Adders := 4     
+	   2 Input    9 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 1     
+	   3 Input    5 Bit       Adders := 16    
+	   2 Input    5 Bit       Adders := 5     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               64 Bit    Registers := 9     
+	               63 Bit    Registers := 1     
+	               42 Bit    Registers := 1     
+	               41 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
+	               35 Bit    Registers := 1     
+	               32 Bit    Registers := 54    
+	               29 Bit    Registers := 2     
+	               18 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 4     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 4     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 8     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 125   
++---Multipliers : 
+	              29x35  Multipliers := 2     
+	               7x35  Multipliers := 1     
+	              12x29  Multipliers := 1     
++---RAMs : 
+	             512K Bit	(16384 X 32 bit)          RAMs := 1     
+	              32K Bit	(1024 X 32 bit)          RAMs := 2     
+	              16K Bit	(1024 X 16 bit)          RAMs := 3     
+	             1024 Bit	(32 X 32 bit)          RAMs := 1     
+	              256 Bit	(32 X 8 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 13    
+	   5 Input   64 Bit        Muxes := 1     
+	   3 Input   64 Bit        Muxes := 1     
+	   2 Input   63 Bit        Muxes := 2     
+	   2 Input   35 Bit        Muxes := 1     
+	   6 Input   32 Bit        Muxes := 5     
+	   2 Input   32 Bit        Muxes := 132   
+	   3 Input   32 Bit        Muxes := 5     
+	   5 Input   32 Bit        Muxes := 4     
+	   8 Input   32 Bit        Muxes := 2     
+	   9 Input   32 Bit        Muxes := 2     
+	   4 Input   32 Bit        Muxes := 5     
+	   2 Input   18 Bit        Muxes := 1     
+	   4 Input   16 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 7     
+	   5 Input   11 Bit        Muxes := 1     
+	   3 Input   11 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 18    
+	   2 Input    9 Bit        Muxes := 2     
+	   5 Input    9 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 4     
+	   6 Input    8 Bit        Muxes := 1     
+	   3 Input    8 Bit        Muxes := 1     
+	   9 Input    8 Bit        Muxes := 1     
+	   5 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 13    
+	   4 Input    7 Bit        Muxes := 1     
+	   5 Input    7 Bit        Muxes := 1     
+	   3 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   9 Input    5 Bit        Muxes := 2     
+	   5 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 18    
+	   8 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 2     
+	   9 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 235   
+	   3 Input    1 Bit        Muxes := 19    
+	   5 Input    1 Bit        Muxes := 24    
+	   4 Input    1 Bit        Muxes := 24    
+	   9 Input    1 Bit        Muxes := 29    
+	   7 Input    1 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 5     
+	  11 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2020 (col length:140)
+BRAMs: 1510 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP product_reg, operation Mode is: (A*B)'.
+DSP Report: register product_reg is absorbed into DSP product_reg.
+DSP Report: operator product0 is absorbed into DSP product_reg.
+DSP Report: Generating DSP pending_square_reg, operation Mode is: (C+A2*B2)'.
+DSP Report: register magnitude_reg is absorbed into DSP pending_square_reg.
+DSP Report: register magnitude_reg is absorbed into DSP pending_square_reg.
+DSP Report: register pending_square_reg is absorbed into DSP pending_square_reg.
+DSP Report: operator pending_square0 is absorbed into DSP pending_square_reg.
+DSP Report: operator pending_square0 is absorbed into DSP pending_square_reg.
+DSP Report: Generating DSP right_product0, operation Mode is: A2*B2.
+DSP Report: register right_product0 is absorbed into DSP right_product0.
+DSP Report: register best_square_reg is absorbed into DSP right_product0.
+DSP Report: operator right_product0 is absorbed into DSP right_product0.
+DSP Report: operator right_product0 is absorbed into DSP right_product0.
+DSP Report: Generating DSP right_product_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register best_square_reg is absorbed into DSP right_product_reg.
+DSP Report: register right_product_reg is absorbed into DSP right_product_reg.
+DSP Report: operator right_product0 is absorbed into DSP right_product_reg.
+DSP Report: operator right_product0 is absorbed into DSP right_product_reg.
+DSP Report: Generating DSP right_product0, operation Mode is: A2*B2.
+DSP Report: register right_product0 is absorbed into DSP right_product0.
+DSP Report: register right_product0 is absorbed into DSP right_product0.
+DSP Report: operator right_product0 is absorbed into DSP right_product0.
+DSP Report: operator right_product0 is absorbed into DSP right_product0.
+DSP Report: Generating DSP right_product_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register right_product_reg is absorbed into DSP right_product_reg.
+DSP Report: register right_product_reg is absorbed into DSP right_product_reg.
+DSP Report: operator right_product0 is absorbed into DSP right_product_reg.
+DSP Report: operator right_product0 is absorbed into DSP right_product_reg.
+DSP Report: Generating DSP left_product0, operation Mode is: A*B''.
+DSP Report: register left_product0 is absorbed into DSP left_product0.
+DSP Report: register left_product0 is absorbed into DSP left_product0.
+DSP Report: operator left_product0 is absorbed into DSP left_product0.
+DSP Report: operator left_product0 is absorbed into DSP left_product0.
+DSP Report: Generating DSP left_product_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register best_energy_reg is absorbed into DSP left_product_reg.
+DSP Report: register left_product_reg is absorbed into DSP left_product_reg.
+DSP Report: operator left_product0 is absorbed into DSP left_product_reg.
+DSP Report: operator left_product0 is absorbed into DSP left_product_reg.
+DSP Report: Generating DSP left_product0, operation Mode is: A*B''.
+DSP Report: register left_product0 is absorbed into DSP left_product0.
+DSP Report: register left_product0 is absorbed into DSP left_product0.
+DSP Report: operator left_product0 is absorbed into DSP left_product0.
+DSP Report: operator left_product0 is absorbed into DSP left_product0.
+DSP Report: Generating DSP left_product_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register best_energy_reg is absorbed into DSP left_product_reg.
+DSP Report: register left_product_reg is absorbed into DSP left_product_reg.
+DSP Report: operator left_product0 is absorbed into DSP left_product_reg.
+DSP Report: operator left_product0 is absorbed into DSP left_product_reg.
+DSP Report: Generating DSP next_energy0, operation Mode is: C+(A*B)'.
+DSP Report: register square_reg is absorbed into DSP next_energy0.
+DSP Report: operator next_energy0 is absorbed into DSP next_energy0.
+DSP Report: operator square0 is absorbed into DSP next_energy0.
+DSP Report: Generating DSP next_energy0, operation Mode is: C'+(A*B)'.
+DSP Report: register next_energy0 is absorbed into DSP next_energy0.
+DSP Report: register square_reg is absorbed into DSP next_energy0.
+DSP Report: operator next_energy0 is absorbed into DSP next_energy0.
+DSP Report: operator square0 is absorbed into DSP next_energy0.
+DSP Report: Generating DSP first_square_reg, operation Mode is: (A*B)'.
+DSP Report: register first_square_reg is absorbed into DSP first_square_reg.
+DSP Report: register square_reg is absorbed into DSP first_square_reg.
+DSP Report: operator square0 is absorbed into DSP first_square_reg.
+WARNING: [Synth 8-6841] Block RAM (u_soc/ram_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
+(address width (14) is more than optimal threshold of 12. Implementing using BWWE will require more logic and timing would be suboptimal. Please use attribute ram_decomp = power if BWWE is desired.)
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[47]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[46]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[45]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[44]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[43]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[42]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[41]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[40]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[39]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[38]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[37]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[36]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[35]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[34]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[33]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[32]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[31]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[30]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[29]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[28]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[27]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[26]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[25]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[24]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[23]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[22]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[21]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[20]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[19]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[18]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[17]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[47]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[46]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[45]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[44]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[43]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[42]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[41]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[40]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[39]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[38]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[37]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[36]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[35]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[34]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[33]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[32]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[31]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[30]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[29]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[28]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[27]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[26]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[25]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[24]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[23]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[22]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[21]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[20]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[19]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[18]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (right_product_reg[17]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[47]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[46]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[45]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[44]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[43]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[42]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[41]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[40]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[39]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[38]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[37]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[36]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[35]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[34]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[33]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[32]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[31]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[30]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[29]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[28]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[27]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[26]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[25]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[24]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[23]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[22]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[21]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[20]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[19]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[18]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[17]) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[47]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[46]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[45]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[44]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[43]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[42]__0) is unused and will be removed from module peak_selector.
+WARNING: [Synth 8-3332] Sequential element (left_product_reg[41]__0) is unused and will be removed from module peak_selector.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 2694.578 ; gain = 689.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++-----------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name      | RTL Object              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|riscv_top        | u_soc/u_accel/a_mem_reg | 1 K x 16(READ_FIRST)   | W |   | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|riscv_top        | u_soc/u_accel/b_mem_reg | 1 K x 16(READ_FIRST)   | W |   | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|\u_soc/u_window  | frame_mem_reg           | 1 K x 16(READ_FIRST)   | W |   | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|\u_soc/u_window  | scores_reg              | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|\u_soc/u_window  | energies_reg            | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|riscv_top        | u_soc/ram_reg           | 16 K x 32(READ_FIRST)  | W |   | 16 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 16     | 
++-----------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++--------------+-------------------+-----------+----------------------+--------------+
+|Module Name   | RTL Object        | Inference | Size (Depth x Width) | Primitives   | 
++--------------+-------------------+-----------+----------------------+--------------+
+|\u_soc/u_cpu  | cpuregs_reg       | Implied   | 32 x 32              | RAM32M x 12  | 
+|riscv_top     | u_soc/rx_fifo_reg | Implied   | 32 x 8               | RAM32M x 2   | 
++--------------+-------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dot_accel          | (A*B)'          | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|peak_selector      | (C+A2*B2)'      | 18     | 17     | 35     | -      | 35     | 1    | 1    | 0    | -    | -     | 0    | 1    | 
+|peak_selector      | A2*B2           | 19     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|peak_selector      | (PCIN>>17)+A2*B | 19     | 13     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|peak_selector      | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|peak_selector      | (PCIN>>17)+A2*B | 18     | 13     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|peak_selector      | A*B''           | 19     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|peak_selector      | (PCIN>>17)+A*B2 | 19     | 13     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|peak_selector      | A*B''           | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|peak_selector      | (PCIN>>17)+A*B2 | 18     | 13     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|window_multi_accel | C+(A*B)'        | 16     | 16     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 1    | 0    | 
+|window_multi_accel | C'+(A*B)'       | 16     | 16     | 32     | -      | 32     | 0    | 0    | 1    | -    | -     | 1    | 0    | 
+|window_multi_accel | (A*B)'          | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
++-------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2694.578 ; gain = 689.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2709.848 ; gain = 704.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-----------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name      | RTL Object              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|riscv_top        | u_soc/u_accel/a_mem_reg | 1 K x 16(READ_FIRST)   | W |   | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|riscv_top        | u_soc/u_accel/b_mem_reg | 1 K x 16(READ_FIRST)   | W |   | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|\u_soc/u_window  | frame_mem_reg           | 1 K x 16(READ_FIRST)   | W |   | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|\u_soc/u_window  | scores_reg              | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|\u_soc/u_window  | energies_reg            | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|riscv_top        | u_soc/ram_reg           | 16 K x 32(READ_FIRST)  | W |   | 16 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 16     | 
++-----------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++--------------+-------------------+-----------+----------------------+--------------+
+|Module Name   | RTL Object        | Inference | Size (Depth x Width) | Primitives   | 
++--------------+-------------------+-----------+----------------------+--------------+
+|\u_soc/u_cpu  | cpuregs_reg       | Implied   | 32 x 32              | RAM32M x 12  | 
+|riscv_top     | u_soc/rx_fifo_reg | Implied   | 32 x 8               | RAM32M x 2   | 
++--------------+-------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance u_soc/u_accel/a_mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/u_accel/b_mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/u_window/frame_mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/u_window/scores_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/u_window/energies_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/ram_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/ram_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/ram_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/ram_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/ram_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/ram_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/ram_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/ram_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/ram_reg_2_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/ram_reg_2_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/ram_reg_2_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/ram_reg_2_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/ram_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/ram_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/ram_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_soc/ram_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 2746.203 ; gain = 740.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 2760.918 ; gain = 755.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 2760.918 ; gain = 755.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 2760.918 ; gain = 755.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 2760.918 ; gain = 755.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 2760.926 ; gain = 755.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 2760.926 ; gain = 755.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dot_accel          | (A*B)'            | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|window_multi_accel | C'+(A*B)'         | 30     | 18     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 1    | 0    | 
+|window_multi_accel | C'+(A*B)'         | 30     | 18     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 1    | 0    | 
+|window_multi_accel | ((A*B)')'         | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|peak_selector      | (C+A'*B')'        | 18     | 17     | 35     | -      | 35     | 1    | 1    | 1    | -    | -     | 0    | 1    | 
+|peak_selector      | A'*B'             | 18     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|peak_selector      | (PCIN>>17+A'*B')' | 18     | 12     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|peak_selector      | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|peak_selector      | (PCIN>>17+A'*B')' | 17     | 12     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|peak_selector      | A*B''             | 18     | 17     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|peak_selector      | (PCIN>>17+A*B'')' | 18     | 12     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|peak_selector      | A*B''             | 17     | 17     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|peak_selector      | (PCIN>>17+A*B'')' | 17     | 12     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
++-------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     2|
+|2     |CARRY4      |   464|
+|3     |DSP48E1     |    13|
+|11    |LUT1        |   335|
+|12    |LUT2        |   698|
+|13    |LUT3        |   453|
+|14    |LUT4        |   812|
+|15    |LUT5        |   604|
+|16    |LUT6        |  1570|
+|17    |MMCME2_BASE |     1|
+|18    |MUXF7       |    81|
+|19    |MUXF8       |    16|
+|20    |RAM32M      |    11|
+|21    |RAM32X1D    |     6|
+|22    |RAMB18E1    |     3|
+|23    |RAMB36E1    |    18|
+|40    |FDPE        |     4|
+|41    |FDRE        |  2405|
+|42    |FDSE        |   183|
+|43    |IBUF        |     2|
+|44    |IBUFDS      |     1|
+|45    |OBUF        |     3|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 2760.926 ; gain = 755.691
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 198 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 2760.926 ; gain = 637.984
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 2760.926 ; gain = 755.691
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 2769.000 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 614 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/board/riscv.xdc]
+Finished Parsing XDC File [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/board/riscv.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2795.145 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 18 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 11 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 6 instances
+
+Synth Design complete | Checksum: 430fcb66
+INFO: [Common 17-83] Releasing license: Synthesis
+79 Infos, 257 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 2795.145 ; gain = 1316.578
+# set reset_async_pins [get_pins -hierarchical -filter {NAME =~ *reset_sync_reg*/PRE}]
+# if {[llength $reset_async_pins] != 4} { error "Expected four reset synchronizer PRE pins" }
+# puts "INFO: Verified four asynchronous reset PRE pins; synchronous D paths remain timed"
+INFO: Verified four asynchronous reset PRE pins; synchronous D paths remain timed
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z100'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z100'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.668 . Memory (MB): peak = 2795.145 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+Ending Cache Timing Information Task | Checksum: 167480a43
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2897.750 ; gain = 102.605
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 2071d961b
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.195 . Memory (MB): peak = 3210.660 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 2 cells
+INFO: [Opt 31-1021] In phase Retarget, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1dca4a366
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.229 . Memory (MB): peak = 3210.660 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 14c025958
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.293 . Memory (MB): peak = 3210.660 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 14c025958
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.343 . Memory (MB): peak = 3210.660 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 1e6e25ebe
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.470 . Memory (MB): peak = 3210.660 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 1e6e25ebe
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.486 . Memory (MB): peak = 3210.660 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               2  |                                              2  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 3210.660 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1e6e25ebe
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.499 . Memory (MB): peak = 3210.660 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 21 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 19 newly gated: 0 Total Ports: 42
+Ending PowerOpt Patch Enables Task | Checksum: 1fa9d68f9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 3307.074 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1fa9d68f9
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3307.074 ; gain = 96.414
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 139094711
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.364 . Memory (MB): peak = 3307.074 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 139094711
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3307.074 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 139094711
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 3307.074 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+25 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 3307.074 ; gain = 511.930
+# place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z100'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z100'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 3307.074 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: f9ea45dc
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 3307.074 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 15e1d3fe1
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 16d74a773
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 16d74a773
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3307.074 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 16d74a773
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1cf322b6b
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 197fee23e
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 197fee23e
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 UpdateTiming Before Physical Synthesis
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 15324f55a
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 2.4.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 243 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 113 nets or LUTs. Breaked 0 LUT, combined 113 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |            113  |                   113  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |            113  |                   113  |           0  |           4  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 101070793
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 3307.074 ; gain = 0.000
+Phase 2.4 Global Placement Core | Checksum: 9789784b
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 3307.074 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 9789784b
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 118f81690
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: c925bf8d
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 10cb2c3fd
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 5772211d
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: d478df0f
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 151cab0a1
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 105084d41
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 3307.074 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 105084d41
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 186a2153d
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=14.620 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1abe52006
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.218 . Memory (MB): peak = 3307.074 ; gain = 0.000
+INFO: [Place 46-33] Processed net rst, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 1, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 1abe52006
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.341 . Memory (MB): peak = 3307.074 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 186a2153d
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=14.620. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 26495e292
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 3307.074 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 26495e292
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 26495e292
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                1x1|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                2x2|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 26495e292
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 3307.074 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 26495e292
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 3307.074 ; gain = 0.000
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 3307.074 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 26f85b6c8
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 3307.074 ; gain = 0.000
+Ending Placer Task | Checksum: 177b5f307
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 3307.074 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+30 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 3307.074 ; gain = 0.000
+# route_design
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z100'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z100'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: b99942b7 ConstDB: 0 ShapeSum: be1cb050 RouteDB: 0
+Post Restoration Checksum: NetGraph: 71509594 | NumContArr: 461568bf | Constraints: 190a55ad | Timing: 0
+Phase 1 Build RT Design | Checksum: d0705400
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:01:01 . Memory (MB): peak = 3429.129 ; gain = 122.055
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: d0705400
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:01:01 . Memory (MB): peak = 3429.129 ; gain = 122.055
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: d0705400
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:01:01 . Memory (MB): peak = 3429.129 ; gain = 122.055
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 1b5b82458
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:01:03 . Memory (MB): peak = 3474.551 ; gain = 167.477
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=14.722 | TNS=0.000  | WHS=-0.232 | THS=-127.514|
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 6416
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 6416
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 1ec637d92
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:01:04 . Memory (MB): peak = 3501.684 ; gain = 194.609
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 1ec637d92
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:01:04 . Memory (MB): peak = 3501.684 ; gain = 194.609
+Phase 3 Initial Routing | Checksum: 1f4a3a792
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:01:05 . Memory (MB): peak = 3501.684 ; gain = 194.609
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 434
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=9.468  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: d330c502
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:01:06 . Memory (MB): peak = 3501.684 ; gain = 194.609
+Phase 4 Rip-up And Reroute | Checksum: d330c502
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:01:06 . Memory (MB): peak = 3501.684 ; gain = 194.609
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: d330c502
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:01:06 . Memory (MB): peak = 3501.684 ; gain = 194.609
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: d330c502
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:01:06 . Memory (MB): peak = 3501.684 ; gain = 194.609
+Phase 5 Delay and Skew Optimization | Checksum: d330c502
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:01:06 . Memory (MB): peak = 3501.684 ; gain = 194.609
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 10e04478a
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:01:06 . Memory (MB): peak = 3501.684 ; gain = 194.609
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=9.468  | TNS=0.000  | WHS=0.056  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 10e04478a
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:01:06 . Memory (MB): peak = 3501.684 ; gain = 194.609
+Phase 6 Post Hold Fix | Checksum: 10e04478a
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:01:06 . Memory (MB): peak = 3501.684 ; gain = 194.609
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.249918 %
+  Global Horizontal Routing Utilization  = 0.345288 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 1643923c9
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:01:06 . Memory (MB): peak = 3501.684 ; gain = 194.609
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1643923c9
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:01:06 . Memory (MB): peak = 3501.684 ; gain = 194.609
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1a2e2203f
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:01:07 . Memory (MB): peak = 3501.684 ; gain = 194.609
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=9.468  | TNS=0.000  | WHS=0.056  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 1a2e2203f
+
+Time (s): cpu = 00:01:20 ; elapsed = 00:01:07 . Memory (MB): peak = 3501.684 ; gain = 194.609
+INFO: [Route 35-16] Router Completed Successfully
+
+Phase 11 Post-Route Event Processing
+Phase 11 Post-Route Event Processing | Checksum: 12dc8dd72
+
+Time (s): cpu = 00:01:20 ; elapsed = 00:01:07 . Memory (MB): peak = 3501.684 ; gain = 194.609
+
+Time (s): cpu = 00:01:20 ; elapsed = 00:01:07 . Memory (MB): peak = 3501.684 ; gain = 194.609
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:21 ; elapsed = 00:01:08 . Memory (MB): peak = 3501.684 ; gain = 194.609
+# report_timing_summary -file [file join $reports timing_summary.rpt]
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+# report_utilization -file [file join $reports utilization.rpt]
+# report_drc -file [file join $reports drc.rpt]
+Command: report_drc -file E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/build/reports/riscv_0000A501/drc.rpt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/build/reports/riscv_0000A501/drc.rpt.
+report_drc completed successfully
+# if {[llength [get_drc_violations -quiet -filter {NAME =~ REQP-1839*}]] != 0} { error "Asynchronous reset still reaches BRAM controls" }
+# report_io -file [file join $reports io.rpt]
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 3502.094 ; gain = 0.000
+# report_clocks -file [file join $reports clocks.rpt]
+# check_timing -verbose -file [file join $reports check_timing.rpt]
+# report_exceptions -file [file join $reports exceptions.rpt]
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+# set setup [get_timing_paths -delay_type max -max_paths 1]
+# set hold [get_timing_paths -delay_type min -max_paths 1]
+# if {[llength $setup] == 0 || [llength $hold] == 0} { error "No timing paths" }
+# if {[get_property SLACK $setup] < 0 || [get_property SLACK $hold] < 0} { error "RISC-V timing failed" }
+# write_checkpoint -force [file join $work riscv_routed.dcp]
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.420 . Memory (MB): peak = 3502.094 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/build/work/riscv_0000A501/riscv_routed.dcp' has been generated.
+# write_bitstream -force [file join $work riscv.bit]
+Command: write_bitstream -force E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/build/work/riscv_0000A501/riscv.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z100'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z100'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_soc/u_accel/product_reg input u_soc/u_accel/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_soc/u_accel/product_reg input u_soc/u_accel/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_soc/u_window/first_square_reg input u_soc/u_window/first_square_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_soc/u_window/first_square_reg input u_soc/u_window/first_square_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_soc/u_window/next_energy0 input u_soc/u_window/next_energy0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_soc/u_window/next_energy0 input u_soc/u_window/next_energy0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_soc/u_window/next_energy0__0 input u_soc/u_window/next_energy0__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_soc/u_window/next_energy0__0 input u_soc/u_window/next_energy0__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_soc/u_window/u_peak/left_product0 input u_soc/u_window/u_peak/left_product0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_soc/u_window/u_peak/left_product0__0 input u_soc/u_window/u_peak/left_product0__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_soc/u_window/u_peak/left_product_reg input u_soc/u_window/u_peak/left_product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_soc/u_window/u_peak/left_product_reg__0 input u_soc/u_window/u_peak/left_product_reg__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP u_soc/u_window/u_peak/pending_square_reg input u_soc/u_window/u_peak/pending_square_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_soc/u_window/next_energy0 output u_soc/u_window/next_energy0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_soc/u_window/next_energy0__0 output u_soc/u_window/next_energy0__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_soc/u_window/u_peak/left_product0 output u_soc/u_window/u_peak/left_product0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_soc/u_window/u_peak/left_product0__0 output u_soc/u_window/u_peak/left_product0__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_soc/u_window/u_peak/right_product0 output u_soc/u_window/u_peak/right_product0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP u_soc/u_window/u_peak/right_product0__0 output u_soc/u_window/u_peak/right_product0__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_soc/u_accel/product_reg multiplier stage u_soc/u_accel/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_soc/u_window/u_peak/left_product0 multiplier stage u_soc/u_window/u_peak/left_product0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_soc/u_window/u_peak/left_product0__0 multiplier stage u_soc/u_window/u_peak/left_product0__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_soc/u_window/u_peak/left_product_reg multiplier stage u_soc/u_window/u_peak/left_product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_soc/u_window/u_peak/left_product_reg__0 multiplier stage u_soc/u_window/u_peak/left_product_reg__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_soc/u_window/u_peak/pending_square_reg multiplier stage u_soc/u_window/u_peak/pending_square_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_soc/u_window/u_peak/right_product0 multiplier stage u_soc/u_window/u_peak/right_product0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_soc/u_window/u_peak/right_product0__0 multiplier stage u_soc/u_window/u_peak/right_product0__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_soc/u_window/u_peak/right_product_reg multiplier stage u_soc/u_window/u_peak/right_product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP u_soc/u_window/u_peak/right_product_reg__0 multiplier stage u_soc/u_window/u_peak/right_product_reg__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC ZPS7-1] PS7 block required: The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 30 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/clean_a5_20260925_164606/build/work/riscv_0000A501/riscv.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+8 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 4600.418 ; gain = 1098.324
+# puts "PASS: RISC-V $version bitstream generated and setup/hold timing met"
+PASS: RISC-V 0000A501 bitstream generated and setup/hold timing met
+# close_project
+# exit 0
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 25 16:49:00 2026...

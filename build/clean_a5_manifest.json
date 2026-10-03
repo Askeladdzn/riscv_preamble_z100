@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "build_id": "0000A501",
+  "clean_root": "E:\\biancheng\\vscode\\Z100\\FPGA\\fpga_competition_2026\\build\\clean_a5_20260925_164606",
+  "original_source_sha256": {
+    "src/rtl/uart_rx.v": "88ebe93ef1f5e01f6817d986f7a7cd7c145b407e17ff9e4336ccea9765f8d61c",
+    "src/rtl/uart_tx.v": "32a5344c9c98c595419ae8cb74437ad1ccfa76e30e5eeaef28867104f2fba0c7",
+    "src/rtl/dot_accel.v": "76af272b9f3a8083d1ed0ee635499e49e602020e771eee8a1f677d58d83f0505",
+    "src/rtl/peak_selector.v": "cbb5adc119c938405ed8b2a76c300b81e0d1c95d9f97f3685784ecedd121898e",
+    "src/rtl/window_multi_accel.v": "f3f3c49349c86e4270b3eed43291b078f725c2dd4d149523d005b7915e021519",
+    "src/rtl/riscv_multi_soc.v": "25e5fbbca280e3defa76e300d39cefc159b4cb98056edd99e4f5cfd5c7b80e8a",
+    "src/rtl/riscv_top.v": "ba4e60a5dc5885e28184ab0f8b61dac92a4747c9ef56ba2281b45ff6bc65908d",
+    "src/firmware/start.S": "1202f48d913d2989aad94a801a7e8245824ca65ba6335f7845651f99180ed09a",
+    "src/firmware/link.ld": "48b2dc314b91c7abcb02eef63ce8e3bd0fe219d28ca4a3c810562d28adbd37f5",
+    "src/firmware/detection_a5.c": "28f303809dd9c67e8522e20bddf25aa0cd915538b01f7346caf5bf4016487328",
+    "third_party/picorv32/picorv32.v": "0836050971b3c6cdd28ac3b1e5719a67fb645161912bef1e472e63995ceb0622",
+    "board/riscv.xdc": "ab26345eab90a7b8c11769810850714ea6f9250e04922738e3bf8e397de91ea2",
+    "build/build_detection_a5.tcl": "20f38185d5bf1a9e40cf51cfc3dcf4bd07593c25dbb0798af89294c6fc6e28bd",
+    "build/build_detection_a5_firmware.ps1": "16118384e21c8aff38f832348bde2101dc7186dbfb95370844fab285aa47aee5",
+    "build/program_riscv.tcl": "c1cb4f5453983c7dc0532932959aff95aa0fbd728864bc80c7c8708c4ff07847"
+  },
+  "firmware_bin_and_hex_equal": true,
+  "bitstream_sha256": "86f9b45d1ea8d1bd08fbee5436b38c1c2d3bcf82617e7f882cd80955205c051d",
+  "clean_relative_root": "build/clean_a5_20260925_164606"
+}

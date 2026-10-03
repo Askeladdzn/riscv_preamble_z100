@@ -1,0 +1,150 @@
+{
+  "status": "PASS",
+  "physical_board": false,
+  "description": "two hand-calculated tasks; synthetic transport and timing fixtures",
+  "checks": 15,
+  "results": [
+    {
+      "test": "two_tasks_dot_and_fir",
+      "expected": "PASS",
+      "actual": {
+        "status": "PASS",
+        "check": "exact_integer_results",
+        "cases": 2,
+        "build_id": "example_v1"
+      }
+    },
+    {
+      "test": "wrong_integer",
+      "expected": "REJECT",
+      "actual": {
+        "status": "FAIL",
+        "error": "signed_dot: result mismatch"
+      }
+    },
+    {
+      "test": "missing_case",
+      "expected": "REJECT",
+      "actual": {
+        "status": "FAIL",
+        "error": "case set mismatch: missing=['fir_valid'], extra=[]"
+      }
+    },
+    {
+      "test": "duplicate_case",
+      "expected": "REJECT",
+      "actual": {
+        "status": "FAIL",
+        "error": "duplicate case_id: signed_dot"
+      }
+    },
+    {
+      "test": "wrong_build",
+      "expected": "REJECT",
+      "actual": {
+        "status": "FAIL",
+        "error": "signed_dot: build_id mismatch"
+      }
+    },
+    {
+      "test": "different_input",
+      "expected": "REJECT",
+      "actual": {
+        "status": "FAIL",
+        "error": "signed_dot: input mismatch"
+      }
+    },
+    {
+      "test": "float_disguised_integer",
+      "expected": "REJECT",
+      "actual": {
+        "status": "FAIL",
+        "error": "signed_dot: result must contain exact integers/null"
+      }
+    },
+    {
+      "test": "boolean_disguised_integer",
+      "expected": "REJECT",
+      "actual": {
+        "status": "FAIL",
+        "error": "signed_dot: result must contain exact integers/null"
+      }
+    },
+    {
+      "test": "unchanged_file",
+      "expected": "PASS",
+      "actual": {
+        "status": "PASS",
+        "check": "artifact_hashes",
+        "files": 1
+      }
+    },
+    {
+      "test": "tampered_file",
+      "expected": "REJECT",
+      "actual": {
+        "status": "FAIL",
+        "error": "hash mismatch: observed.jsonl"
+      }
+    },
+    {
+      "test": "manifest_path_escape",
+      "expected": "REJECT",
+      "actual": {
+        "status": "FAIL",
+        "error": "unsafe relative path"
+      }
+    },
+    {
+      "test": "same_task_timing",
+      "expected": "PASS",
+      "actual": {
+        "status": "PASS",
+        "check": "same_task_timing",
+        "identity": {
+          "task": "fir_valid",
+          "case_id": "fir_valid",
+          "input_sha256": "8827ef3d2d23f4af3f2e94a4d8d0c80c92583d6bedadd2012e4a2a938203c8ba",
+          "build_id": "example_v1",
+          "clock_hz": 1000000,
+          "boundary": "board_full_task"
+        },
+        "repeats_per_mode": 3,
+        "median_cycles": {
+          "cpu": 1000,
+          "accelerator": 250
+        },
+        "median_ms": {
+          "cpu": 1.0,
+          "accelerator": 0.25
+        },
+        "speedup": 4.0,
+        "excludes": "UART, host rendering and post-timing verification; inspect instrumentation separately"
+      }
+    },
+    {
+      "test": "mixed_input_timing",
+      "expected": "REJECT",
+      "actual": {
+        "status": "FAIL",
+        "error": "unfair timing: different task/input/build/clock/boundary"
+      }
+    },
+    {
+      "test": "core_as_full_timing",
+      "expected": "REJECT",
+      "actual": {
+        "status": "FAIL",
+        "error": "unfair timing: different task/input/build/clock/boundary"
+      }
+    },
+    {
+      "test": "missing_cpu_or_accelerator",
+      "expected": "REJECT",
+      "actual": {
+        "status": "FAIL",
+        "error": "both cpu and accelerator trials required"
+      }
+    }
+  ]
+}

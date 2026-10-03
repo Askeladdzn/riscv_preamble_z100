@@ -1,0 +1,73 @@
+#-----------------------------------------------------------
+# xsim v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Sep 25 16:22:48 2026
+# Process ID: 39796
+# Current directory: E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/sim/work/detection_0000A401
+# Command line: xsim.exe -log E:\biancheng\vscode\Z100\FPGA\fpga_competition_2026\sim\results\detection_a4_system.log -mode tcl -source {xsim.dir/a4_sim/xsim_script.tcl}
+# Log file: E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/sim/results/detection_a4_system.log
+# Journal file: E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/sim/work/detection_0000A401\xsim.jou
+# Running On: zhangbo, OS: Windows, CPU Frequency: 2495 MHz, CPU Physical cores: 32, Host memory: 33605 MB
+#-----------------------------------------------------------
+source xsim.dir/a4_sim/xsim_script.tcl
+# xsim {a4_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+SIM transaction 1 received
+SIM transaction 2 received
+SIM transaction 3 received
+SIM transaction 4 received
+SIM transaction 5 received
+SIM transaction 6 received
+SIM transaction 7 received
+SIM transaction 8 received
+SIM transaction 9 received
+SIM transaction 10 received
+SIM transaction 11 received
+SIM transaction 12 received
+SIM transaction 13 received
+SIM transaction 14 received
+SIM transaction 15 received
+SIM transaction 16 received
+SIM transaction 17 received
+SIM transaction 18 received
+SIM transaction 19 received
+SIM transaction 20 received
+SIM transaction 21 received
+SIM transaction 22 received
+SIM transaction 23 received
+SIM transaction 24 received
+SIM transaction 25 received
+SIM transaction 26 received
+SIM transaction 27 received
+SIM transaction 28 received
+SIM transaction 29 received
+SIM transaction 30 received
+SIM transaction 31 received
+SIM transaction 32 received
+SIM transaction 33 received
+SIM transaction 34 received
+SIM transaction 35 received
+SIM transaction 36 received
+SIM transaction 37 received
+SIM transaction 38 received
+SIM transaction 39 received
+SIM transaction 40 received
+SIM transaction 41 received
+SIM transaction 42 received
+SIM transaction 43 received
+SIM transaction 44 received
+SIM transaction 45 received
+SIM transaction 46 received
+SIM transaction 47 received
+SIM transaction 48 received
+SIM transaction 49 received
+PASS: scanner MMIO 11 STARTs 960 frame writes 128 template writes
+PASS: integrated UART/CPU/MMIO simulation, 49 transactions, 69 STARTs, 8464 buffer writes, 2 boots; Python checks follow
+$finish called at time : 523917390 ns : File "E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/sim/tb_detection_a4_system.sv" Line 104
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:47 . Memory (MB): peak = 206.668 ; gain = 0.000
+exit
+INFO: xsimkernel Simulation Memory Usage: 11500 KB (Peak: 11500 KB), Simulation CPU Usage: 106421 ms
+INFO: [Common 17-206] Exiting xsim at Fri Sep 25 16:24:37 2026...

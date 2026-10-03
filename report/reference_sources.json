@@ -1,0 +1,26 @@
+[
+  {
+    "name": "amd_guide_2026",
+    "path": "docs/reference/amd_guide_2026.pdf",
+    "sha256": "c6ad82acd4f7bdcd13bd412e232ed85d05f2a87dd5e2cdd04f9d219f88b569fc",
+    "reviewed_pdf_pages": [
+      22,
+      23,
+      24,
+      25,
+      28
+    ]
+  },
+  {
+    "name": "picorv32_readme",
+    "url": "https://raw.githubusercontent.com/YosysHQ/picorv32/ef203c2b0a3fb793280f5114941416c425c5b461/README.md",
+    "sha256": "399c2d2e00e4581ee4ef33034089992401e10c4e917a33cd363b80dfb283e964",
+    "bytes": 30622
+  },
+  {
+    "name": "gnuradio_corr_est",
+    "url": "https://raw.githubusercontent.com/gnuradio/gnuradio/v3.10.10.0/gr-digital/include/gnuradio/digital/corr_est_cc.h",
+    "sha256": "347df57908a4e940a40150505220417763680c53164351cb499a4772e9678935",
+    "bytes": 5153
+  }
+]

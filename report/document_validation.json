@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "date": "2026-10-03",
+  "page_count": 26,
+  "visually_inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "method": "Unchanged illustrated report from 2026-10-02. PDF text, document properties, embedded image metadata and rendered page overview rechecked on 2026-10-03.",
+  "sha256": {
+    "report/design_report.docx": "de9fefe95fa9cc6ff26884a4a8b19420fc7176c1445909e5c7f4957a1eeca906",
+    "report/design_report.pdf": "3cb15763cee6223026a8ca3ab32339cccd3f90bae3bca90ae573fd1855ad9b2d",
+    "report/design_report.md": "9ba1bb515e2cf47a610ba2e3417fb8aba0d91160f34674939037a8423df531bf"
+  }
+}

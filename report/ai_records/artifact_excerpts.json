@@ -1,0 +1,274 @@
+[
+  {
+    "id": "a2_timeout",
+    "path": "report/ai_records/evidence/a2_timeout.log",
+    "encoding": "utf-8",
+    "file_sha256": "35bf3be75124d539ff70b463e1eca0d5b4d38b0dbfc26242a2b7bf8f8ca6fda9",
+    "lines": [
+      {
+        "line": 23,
+        "text": "Fatal: FAIL: unit timeout"
+      },
+      {
+        "line": 24,
+        "text": "Time: 1410065408 ns  Iteration: 0  Process: /tb_window_accel/Initial90_12  Scope: tb_window_accel  File: E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/sim/tb_window_accel.sv Line: 90"
+      },
+      {
+        "line": 25,
+        "text": "$finish called at time : 1410065408 ns"
+      }
+    ]
+  },
+  {
+    "id": "a5_language",
+    "path": "report/ai_records/evidence/a5_synthesis_failure.log",
+    "encoding": "gb18030",
+    "file_sha256": "531b1a033f3cd383dfb5a64b7ef326eec59b205857441fcec846f704e5724aa3",
+    "lines": [
+      {
+        "line": 38,
+        "text": "ERROR: [Synth 8-10936] loop variable declaration is not allowed in this mode of Verilog [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/src/rtl/window_multi_accel.v:20]"
+      },
+      {
+        "line": 45,
+        "text": "ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details"
+      }
+    ]
+  },
+  {
+    "id": "a4_old_header",
+    "path": "report/ai_records/evidence/a4_old_header.c",
+    "encoding": "utf-8",
+    "file_sha256": "e56a1da59d1904fcd78bd50dd446f687ad062e6d52438642af96067b6f89f5ad",
+    "lines": [
+      {
+        "line": 56,
+        "text": "static void response(uint8_t command, uint16_t seq, const uint8_t *body, uint16_t size) {"
+      },
+      {
+        "line": 57,
+        "text": "    uint8_t header[8] = {1,command,0,0,0,0,0,0};"
+      },
+      {
+        "line": 264,
+        "text": "static void detection_command(uint8_t command, uint16_t seq, uint16_t size) {"
+      },
+      {
+        "line": 266,
+        "text": "    if (command==4) {"
+      },
+      {
+        "line": 291,
+        "text": "    if (command!=7) { sw=software_scan(n); sw_cycles=cycles()-start; }"
+      },
+      {
+        "line": 295,
+        "text": "    int ok=command==5 ? legacy_scan(n,&hw,metrics) :"
+      },
+      {
+        "line": 296,
+        "text": "           command>=6 ? hardware_peak(n,&hw,metrics) : hardware_scan(n,&hw,metrics);"
+      },
+      {
+        "line": 298,
+        "text": "    if (!ok) { error_response(seq,ACCEL_ERROR,command==5 ? ACC(4) : WIN(4)); return; }"
+      },
+      {
+        "line": 299,
+        "text": "    trace_direct=command==7;"
+      },
+      {
+        "line": 300,
+        "text": "    if (command==6) capture_statistics(n);"
+      },
+      {
+        "line": 301,
+        "text": "    uint32_t mismatch=command==7 ? NONE : 0;"
+      },
+      {
+        "line": 302,
+        "text": "    if (command!=7)"
+      },
+      {
+        "line": 309,
+        "text": "    put32(body+80,command==7 ? NONE : stats_crc(sw_scores,sw_energies,n-63));"
+      },
+      {
+        "line": 310,
+        "text": "    put32(body+84,command==7 ? NONE : stats_crc(hw_scores,hw_energies,n-63));"
+      },
+      {
+        "line": 311,
+        "text": "    put32(body+88,detections); put32(body+92,command==5 ? ACC(4) : WIN(4)); put32(body+96,BUILD_ID);"
+      },
+      {
+        "line": 312,
+        "text": "    put32(body+100,command==5 ? 64*(n-63) : WIN(0x2c));"
+      },
+      {
+        "line": 313,
+        "text": "    put32(body+104,command==5 ? 64*(n-63) : WIN(0x30));"
+      },
+      {
+        "line": 314,
+        "text": "    put32(body+108,command==5 ? n-63 : WIN(0x34));"
+      },
+      {
+        "line": 315,
+        "text": "    response(command==5 ? 0x85 : 0x83,seq,body,112);"
+      },
+      {
+        "line": 318,
+        "text": "static void execute(uint8_t command, uint16_t seq, uint16_t size) {"
+      },
+      {
+        "line": 319,
+        "text": "    if (command==3 || command==4 || command==5 || command==6 || command==7) { detection_command(command,seq,size); return; }"
+      },
+      {
+        "line": 321,
+        "text": "    if (command==1) {"
+      },
+      {
+        "line": 328,
+        "text": "    if (command!=2) { error_response(seq,BAD_COMMAND,command); return; }"
+      }
+    ]
+  },
+  {
+    "id": "a4_new_header",
+    "path": "report/ai_records/evidence/a4_corrected_header.c",
+    "encoding": "utf-8",
+    "file_sha256": "615ed21beb5e742062297747e9081b43cffae5ce671d6542222568ea6dc5c143",
+    "lines": [
+      {
+        "line": 56,
+        "text": "static void response(uint8_t command, uint16_t seq, const uint8_t *body, uint16_t size) {"
+      },
+      {
+        "line": 57,
+        "text": "    uint8_t header[8] = {1,command,0,0,0,0,0,0};"
+      },
+      {
+        "line": 264,
+        "text": "static void detection_command(uint8_t command, uint16_t seq, uint16_t size) {"
+      },
+      {
+        "line": 266,
+        "text": "    if (command==4) {"
+      },
+      {
+        "line": 291,
+        "text": "    if (command!=7) { sw=software_scan(n); sw_cycles=cycles()-start; }"
+      },
+      {
+        "line": 295,
+        "text": "    int ok=command==5 ? legacy_scan(n,&hw,metrics) :"
+      },
+      {
+        "line": 296,
+        "text": "           command>=6 ? hardware_peak(n,&hw,metrics) : hardware_scan(n,&hw,metrics);"
+      },
+      {
+        "line": 298,
+        "text": "    if (!ok) { error_response(seq,ACCEL_ERROR,command==5 ? ACC(4) : WIN(4)); return; }"
+      },
+      {
+        "line": 299,
+        "text": "    trace_direct=command==7;"
+      },
+      {
+        "line": 300,
+        "text": "    if (command==6) capture_statistics(n);"
+      },
+      {
+        "line": 301,
+        "text": "    uint32_t mismatch=command==7 ? NONE : 0;"
+      },
+      {
+        "line": 302,
+        "text": "    if (command!=7)"
+      },
+      {
+        "line": 309,
+        "text": "    put32(body+80,command==7 ? NONE : stats_crc(sw_scores,sw_energies,n-63));"
+      },
+      {
+        "line": 310,
+        "text": "    put32(body+84,command==7 ? NONE : stats_crc(hw_scores,hw_energies,n-63));"
+      },
+      {
+        "line": 311,
+        "text": "    put32(body+88,detections); put32(body+92,command==5 ? ACC(4) : WIN(4)); put32(body+96,BUILD_ID);"
+      },
+      {
+        "line": 312,
+        "text": "    put32(body+100,command==5 ? 64*(n-63) : WIN(0x2c));"
+      },
+      {
+        "line": 313,
+        "text": "    put32(body+104,command==5 ? 64*(n-63) : WIN(0x30));"
+      },
+      {
+        "line": 314,
+        "text": "    put32(body+108,command==5 ? n-63 : WIN(0x34));"
+      },
+      {
+        "line": 315,
+        "text": "    response(command+0x80,seq,body,112);"
+      },
+      {
+        "line": 318,
+        "text": "static void execute(uint8_t command, uint16_t seq, uint16_t size) {"
+      },
+      {
+        "line": 319,
+        "text": "    if (command==3 || command==4 || command==5 || command==6 || command==7) { detection_command(command,seq,size); return; }"
+      },
+      {
+        "line": 321,
+        "text": "    if (command==1) {"
+      },
+      {
+        "line": 328,
+        "text": "    if (command!=2) { error_response(seq,BAD_COMMAND,command); return; }"
+      }
+    ]
+  },
+  {
+    "id": "a5_old_for",
+    "path": "report/ai_records/evidence/a5_old_loop.v",
+    "encoding": "utf-8",
+    "file_sha256": "cddcf7f63cad209d5fde2a835865f5b724d4ec5ad2cb498f3b9f079c3ef4d4ee",
+    "lines": [
+      {
+        "line": 20,
+        "text": "        for(integer i=0;i<4;i=i+1)"
+      }
+    ]
+  },
+  {
+    "id": "a5_new_for",
+    "path": "src/rtl/window_multi_accel.v",
+    "encoding": "utf-8",
+    "file_sha256": "f3f3c49349c86e4270b3eed43291b078f725c2dd4d149523d005b7915e021519",
+    "lines": [
+      {
+        "line": 17,
+        "text": "    integer t, i;"
+      },
+      {
+        "line": 20,
+        "text": "        for(i=0;i<4;i=i+1)"
+      },
+      {
+        "line": 126,
+        "text": "            for(t=0;t<4;t=t+1) begin target_position[t]<=32'hffffffff; target_score[t]<=0; target_energy[t]<=0; end"
+      },
+      {
+        "line": 187,
+        "text": "                for(t=0;t<4;t=t+1) begin target_position[t]<=32'hffffffff; target_score[t]<=0; target_energy[t]<=0; end"
+      }
+    ]
+  }
+]

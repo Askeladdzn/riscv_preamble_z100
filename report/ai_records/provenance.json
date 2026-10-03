@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "source_session_filename": "rollout-2026-09-24T13-45-26-01a0d1f2-82fa-7903-987c-6b96f04a35b2.jsonl",
+  "source_prefix_lines": 4962,
+  "source_prefix_sha256": "05541cfbb02968666cf8c2504bfcacba91eb9fc52f4ea6dd2c298b1ffeac769d",
+  "selected_messages": 23,
+  "selection": "Technical message excerpts",
+  "transformation": "Verbatim excerpts; form replies displayed as question and answer",
+  "sha256": {
+    "dialogue.md": "f365e45189e50395dfcf7677bacf2cfcd6d011cd1f3460bd16ee2315743bfbe0",
+    "dialogue.jsonl": "3a6aea68986b1e6cb1d48dc383f2dabb86dfee870933c4bb82a8467b5f6b51b6",
+    "artifact_excerpts.json": "1be48bf7e08f3d6323b54d2e384d0581a3530957b7e9ee88cc5b718770ff6a32"
+  },
+  "revision": "technical_selection_v3",
+  "selected_source_lines": [
+    2040,
+    2289,
+    2328,
+    2428,
+    3172,
+    3179,
+    3208,
+    3256,
+    3286,
+    3300,
+    3332,
+    3381,
+    3488,
+    3532,
+    3592,
+    3720,
+    3992,
+    4056,
+    4194,
+    4269,
+    4279,
+    4318,
+    4367
+  ],
+  "source_verification": "PASS: excerpts match the corresponding spans in the previously verified messages"
+}

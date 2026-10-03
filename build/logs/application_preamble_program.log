@@ -1,0 +1,67 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Sep 25 17:43:37 2026
+# Process ID: 39172
+# Current directory: E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026
+# Command line: vivado.exe -mode batch -source E:\biancheng\vscode\Z100\FPGA\fpga_competition_2026\build\program_riscv.tcl -log E:\biancheng\vscode\Z100\FPGA\fpga_competition_2026\build\logs\application_preamble_program.log -journal E:\biancheng\vscode\Z100\FPGA\fpga_competition_2026\build\logs\application_preamble_program.jou -tclargs 0000A501
+# Log file: E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/logs/application_preamble_program.log
+# Journal file: E:\biancheng\vscode\Z100\FPGA\fpga_competition_2026\build\logs\application_preamble_program.jou
+# Running On: zhangbo, OS: Windows, CPU Frequency: 2495 MHz, CPU Physical cores: 32, Host memory: 33605 MB
+#-----------------------------------------------------------
+source {E:\biancheng\vscode\Z100\FPGA\fpga_competition_2026\build\program_riscv.tcl}
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# set version [lindex $argv 0]
+# if {![regexp {^[0-9A-Fa-f]{8}$} $version]} { error "Expected eight hexadecimal build ID digits" }
+# set bitfile [file join $root build work riscv_$version riscv.bit]
+# if {![file isfile $bitfile]} { error "RISC-V bitstream is missing" }
+# open_hw_manager
+# connect_hw_server -url localhost:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2023.1
+  **** Build date : May  7 2023 at 15:26:57
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2023.1.0
+  ****** Build date   : Apr 10 2023-23:59:24
+    **** Build number : 2023.1.1681142364
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1507.617 ; gain = 24.836
+# set targets [get_hw_targets -quiet]
+# if {[llength $targets] != 1} { error "Expected exactly one JTAG target" }
+# current_hw_target [lindex $targets 0]
+# open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+# set devices [get_hw_devices -quiet -filter {PART == xc7z100}]
+# if {[llength $devices] != 1} { error "Expected exactly one XC7Z100" }
+# set device [lindex $devices 0]
+# current_hw_device $device
+# set_property PROGRAM.FILE $bitfile $device
+# program_hw_devices $device
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1509.926 ; gain = 0.000
+# refresh_hw_device $device
+INFO: [Labtools 27-1434] Device xc7z100 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+# puts "PASS: RISC-V $version programmed into volatile FPGA configuration"
+PASS: RISC-V 0000A501 programmed into volatile FPGA configuration
+# close_hw_target
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+# disconnect_hw_server
+# close_hw_manager
+# exit 0
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 25 17:44:10 2026...

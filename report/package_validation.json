@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "date": "2026-09-27",
+  "scope": "Revalidation of curated entry points; no new hardware measurement",
+  "checks": {
+    "selector": {
+      "status": "PASS",
+      "log_sha256": "d78566d02d3a4c6058edcfaaeb962c744a86c521b5715882b884329f9ef8b13e",
+      "pass_lines": [
+        "PASS: prepared A5 exact reducer vectors 1009",
+        "PASS: exact peak selector 1009 cases 16488 statistics; thresholds, ties, full-width products, clear and pipeline reset"
+      ]
+    },
+    "unit": {
+      "status": "PASS",
+      "log_sha256": "4d44ecf21546eed44a5004613c9b5872c3e12290d71156520dab9b63c2fa3647",
+      "pass_lines": [
+        "PASS: prepared A5 vectors 3487 3249185",
+        "PASS: window multi scanner 3487 frames 3249185 windows 19 error checks; busy protection and reset recovery"
+      ]
+    },
+    "system": {
+      "status": "PASS",
+      "log_sha256": "00bb3aa34b4ec253e82f819e61077d620e3410832452aa3b9f8659b503799249",
+      "pass_lines": [
+        "PASS: A5 integrated stimulus 94",
+        "PASS: scanner MMIO 22 STARTs 2880 frame writes 128 template writes",
+        "PASS: integrated UART/CPU/MMIO simulation, 94 transactions, 69 STARTs, 8464 buffer writes, 2 boots; Python checks follow",
+        "PASS: A5 independent integrated verification {'transactions': 94, 'detection_frames': 24, 'windows_compared': 1298, 'windows_evaluated': 1560, 'fast_frames': 6, 'traced_windows': 1560, 'rejected_requests': 17, 'legacy_dots': 1, 'receive_timeouts': 0}"
+      ]
+    },
+    "implementation": {
+      "status": "PASS",
+      "vivado": "2023.1",
+      "clock_hz": 50000000,
+      "lut": 3935,
+      "ff": 2592,
+      "bram36": 19.5,
+      "dsp": 13,
+      "wns_ns": 9.468,
+      "whs_ns": 0.056,
+      "ordinary_drc_advisories": 30,
+      "critical_warnings": 0,
+      "errors": 0,
+      "new_bitstream_sha256": "ff6066148c18a0548ba6a290e63697b0cc528a8e38bc264d117318876a50e469",
+      "new_bitstream_programmed": false,
+      "shipped_bitstream": "previously board-validated original, unchanged"
+    },
+    "firmware": {
+      "status": "PASS",
+      "bin_hex_identical": {
+        "firmware.bin": "4015f17ea8a757ef4e9ffd4f993a82f1b9dfaccaf6ee68813bec8b3d703e4e3e",
+        "firmware.hex": "2a5751ed538fda52c7db05305899c0fe722a055eeffe6bbe78a5328b34187ac4"
+      }
+    },
+    "web": {
+      "status": "PASS",
+      "scope": "Local HTTP service, 11 resources and nine PC previews; no /api/run request and no board access",
+      "paths": [
+        "/",
+        "/app.js",
+        "/style.css",
+        "/api/report",
+        "/snr_curve.svg",
+        "/dc_curve.svg",
+        "/amplitude_curve.svg",
+        "/application_groups.csv",
+        "/core_groups.csv",
+        "/stress.csv",
+        "/performance.csv"
+      ],
+      "previews": 9
+    }
+  }
+}

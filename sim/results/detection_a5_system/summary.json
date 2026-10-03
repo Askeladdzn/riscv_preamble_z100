@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "physical_board": false,
+  "build_id": "0000A501",
+  "transactions": 94,
+  "detection_frames": 24,
+  "windows_compared": 1298,
+  "windows_evaluated": 1560,
+  "fast_frames": 6,
+  "traced_windows": 1560,
+  "rejected_requests": 17,
+  "legacy_dots": 1,
+  "receive_timeouts": 0
+}

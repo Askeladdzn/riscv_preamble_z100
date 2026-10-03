@@ -1,0 +1,125 @@
+
+Discarded input sections
+
+ .text          0x00000000        0x0 <USERPROFILE>\AppData\Local\Temp\ccQWDtpT.o
+ .data          0x00000000        0x0 <USERPROFILE>\AppData\Local\Temp\ccQWDtpT.o
+ .bss           0x00000000        0x0 <USERPROFILE>\AppData\Local\Temp\ccQWDtpT.o
+ .text          0x00000000        0x0 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .data          0x00000000        0x0 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .bss           0x00000000        0x0 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x00000000         0x00010000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD <USERPROFILE>\AppData\Local\Temp\ccQWDtpT.o
+LOAD <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+LOAD E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/tools/xpack-riscv-none-elf-gcc-15.2.0-1/bin/../lib/gcc/riscv-none-elf/15.2.0/rv32im/ilp32\libgcc.a
+
+.text           0x00000000     0x22ec
+ *(.text.start)
+ .text.start    0x00000000       0x38 <USERPROFILE>\AppData\Local\Temp\ccQWDtpT.o
+                0x00000000                _start
+ *(.text .text.*)
+ .text.drain_until_idle
+                0x00000038       0x64 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .text.hardware_dot
+                0x0000009c       0xe8 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .text.software_dot.constprop.0
+                0x00000184       0x54 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .text.stats_crc
+                0x000001d8       0xa0 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .text.response
+                0x00000278      0x120 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .text.error_response
+                0x00000398       0x38 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .text.software_scan
+                0x000003d0      0x1b8 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .text.detection_command
+                0x00000588     0x13a0 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .text.startup.main
+                0x00001928      0x9c4 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+                0x00001928                main
+
+.rodata         0x000022ec       0xa0
+ *(.rodata .rodata.*)
+ .rodata.main.str1.4
+                0x000022ec        0xa <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ *fill*         0x000022f6        0x2 
+ .rodata.target
+                0x000022f8       0x40 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .rodata.crc_table
+                0x00002338       0x40 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .rodata        0x00002378       0x14 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+
+.rela.dyn       0x0000238c        0x0
+ .rela.text.start
+                0x0000238c        0x0 <USERPROFILE>\AppData\Local\Temp\ccQWDtpT.o
+
+.data           0x0000238c        0x0
+                0x0000238c                        . = ALIGN (0x4)
+                0x00002b8c                        __global_pointer$ = (. + 0x800)
+ *(.sdata .sdata.* .data .data.*)
+
+.bss            0x0000238c     0x64c4
+                0x0000238c                        . = ALIGN (0x4)
+                0x0000238c                        __bss_start = .
+ *(.sbss .sbss.* .bss .bss.* COMMON)
+ .bss.scratch.0
+                0x0000238c      0x400 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .sbss.trace_direct
+                0x0000278c        0x4 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .sbss.trace_windows
+                0x00002790        0x4 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .sbss.detections
+                0x00002794        0x4 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .bss.hw_energies
+                0x00002798     0x1000 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .bss.sw_energies
+                0x00003798     0x1000 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .bss.hw_scores
+                0x00004798     0x1000 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .bss.sw_scores
+                0x00005798     0x1000 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .sbss.hw_count
+                0x00006798        0x4 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .sbss.sw_count
+                0x0000679c        0x4 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .bss.hw_targets
+                0x000067a0       0x50 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .bss.sw_targets
+                0x000067f0       0x50 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .sbss.receive_timeouts
+                0x00006840        0x4 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .sbss.completed
+                0x00006844        0x4 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .sbss.selftest_mask
+                0x00006848        0x4 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .bss.b         0x0000684c      0x800 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .bss.a         0x0000704c      0x800 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+ .bss.payload   0x0000784c     0x1004 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+                0x00008850                        . = ALIGN (0x4)
+                0x00008850                        __bss_end = .
+                0x00010000                        __stack_top = (ORIGIN (ram) + LENGTH (ram))
+                0x00000001                        ASSERT ((__bss_end <= (__stack_top - 0x2000)), Less than 8 KiB left for stack)
+OUTPUT(E:\biancheng\vscode\Z100\FPGA\fpga_competition_2026\build\firmware\0000A501\firmware.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x2a
+ .riscv.attributes
+                0x00000000       0x28 <USERPROFILE>\AppData\Local\Temp\ccQWDtpT.o
+ .riscv.attributes
+                0x00000028       0x2a <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+
+.comment        0x00000000       0x33
+ .comment       0x00000000       0x33 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o
+                                 0x34 (size before relaxing)
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 <USERPROFILE>\AppData\Local\Temp\ccQIdURX.o

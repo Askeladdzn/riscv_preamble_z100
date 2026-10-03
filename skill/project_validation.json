@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "physical_board": false,
+  "source": "replay of archived physical-board UART; no new board run",
+  "build_id": "0000A501",
+  "checks": [
+    {
+      "status": "PASS",
+      "check": "exact_integer_results",
+      "cases": 1704,
+      "build_id": "0000A501"
+    },
+    {
+      "status": "PASS",
+      "check": "same_task_timing",
+      "identity": {
+        "task": "four_packet_preamble",
+        "case_id": "core_q4_s6_r00",
+        "input_sha256": "93dbf55aab202242eac69745b3b6b1b556263457e693685b297a7447046cbc91",
+        "build_id": "0000A501",
+        "clock_hz": 50000000,
+        "boundary": "board_full_task"
+      },
+      "repeats_per_mode": 30,
+      "median_cycles": {
+        "cpu": 4633579.0,
+        "accelerator": 111620.0
+      },
+      "median_ms": {
+        "cpu": 92.67158,
+        "accelerator": 2.2324
+      },
+      "speedup": 41.51208564773338,
+      "excludes": "UART, host rendering and post-timing verification; inspect instrumentation separately"
+    }
+  ],
+  "source_sha256": {
+    "board/results/application_preamble_batch_20260925_174436_888233/plan.json": "bbbae56b85e182bba32b73c1cee9a9549874f6a9d1ed0552386217ffacadc9c2",
+    "board/results/application_preamble_batch_20260925_174436_888233/responses.jsonl": "692077f7303e39ce899dbadb6df23ca1a53ddfe39655aabae62101b90a65ea67",
+    "data/application_preamble/cases.jsonl.gz": "e619f47f5ca4ae7a66e31447686874e3e0e692e6c5d6905af83ceec48022d9a2",
+    "data/application_preamble/reference_results.json": "6bfb6e1461519d98e62c6ca105eb2ad34683c1dcc8fee063ae7acb4cc2c0c2d2"
+  }
+}

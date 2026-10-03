@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+   9100	      0	  25796	  34896	   8850	E:\biancheng\vscode\Z100\FPGA\fpga_competition_2026\build\firmware\0000A501\firmware.elf

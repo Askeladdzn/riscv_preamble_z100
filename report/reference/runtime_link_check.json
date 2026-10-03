@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-27",
+  "status": "PASS",
+  "build_id": "0000A501",
+  "compiler": "riscv-none-elf-gcc.exe (xPack GNU RISC-V Embedded GCC x86_64) 15.2.0",
+  "method": "Build identical production sources with the packaged flags, then repeat omitting only -lgcc. Both binaries equal the accepted firmware byte for byte. The link map contains no extracted libgcc archive member.",
+  "flags": [
+    "-march=rv32im",
+    "-mabi=ilp32",
+    "-O2",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-fno-strict-aliasing",
+    "-fdata-sections",
+    "-ffunction-sections",
+    "-nostdlib",
+    "-nostartfiles",
+    "-Wl,--gc-sections",
+    "-Wl,--build-id=none",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-DBUILD_ID=0x0000a501"
+  ],
+  "without_libgcc_link_succeeded": true,
+  "with_libgcc_map_has_extracted_archive_member": false,
+  "accepted_firmware_sha256": "4015f17ea8a757ef4e9ffd4f993a82f1b9dfaccaf6ee68813bec8b3d703e4e3e",
+  "rebuilt_sha256": {
+    "with_libgcc": "4015f17ea8a757ef4e9ffd4f993a82f1b9dfaccaf6ee68813bec8b3d703e4e3e",
+    "without_libgcc": "4015f17ea8a757ef4e9ffd4f993a82f1b9dfaccaf6ee68813bec8b3d703e4e3e"
+  },
+  "source_sha256": {
+    "src/firmware/detection_a5.c": "28f303809dd9c67e8522e20bddf25aa0cd915538b01f7346caf5bf4016487328",
+    "src/firmware/start.s": "1202f48d913d2989aad94a801a7e8245824ca65ba6335f7845651f99180ed09a",
+    "src/firmware/link.ld": "48b2dc314b91c7abcb02eef63ce8e3bd0fe219d28ca4a3c810562d28adbd37f5",
+    "build/build_detection_a5_firmware.ps1": "bde4fc4e9539eed1476a7c50e4a79a236ad56f5ba5ed1c5844175a1bd6c99363"
+  },
+  "gcc_runtime_exception_url": "https://www.gnu.org/licenses/gcc-exception-3.1.html",
+  "scope": "This check applies only to the current frozen firmware. The compiler and runtime archives are external build dependencies and are not distributed in the project."
+}

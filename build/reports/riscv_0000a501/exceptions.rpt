@@ -1,0 +1,21 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Fri Sep 25 16:44:10 2026
+| Host         : zhangbo running 64-bit major release  (build 9200)
+| Command      : report_exceptions -file E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/build/reports/riscv_0000A501/exceptions.rpt
+| Design       : riscv_top
+| Device       : 7z100-ffg900
+| Speed File   : -2  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Exceptions Report
+
+Position  From                   Through         To                                                               Setup           Hold            Status                           
+--------  ---------------------  --------------  ---------------------------------------------------------------  --------------  --------------  ---------------------------------
+2         [get_ports sys_rst_n]  *               *                                                                false           false           
+3         *                      *               [get_pins -hierarchical -filter {NAME =~ *reset_sync_reg*/PRE}]  false           false           Partially overridden path by FP 2
+4         [get_ports uart_rxd]   *               [get_pins -hierarchical -filter {NAME =~ */rx_meta_reg/D}]       false           false           
+5         *                      *               [get_ports {uart_txd {led[*]}}]                                  false           false           
+

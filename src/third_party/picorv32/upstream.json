@@ -1,0 +1,10 @@
+﻿{
+    "repository":  "https://github.com/YosysHQ/picorv32",
+    "commit":  "ef203c2b0a3fb793280f5114941416c425c5b461",
+    "modifications":  "None",
+    "sha256":  {
+                   "picorv32.v":  "0836050971b3c6cdd28ac3b1e5719a67fb645161912bef1e472e63995ceb0622",
+                   "COPYING":  "041ebc727233e5bf096dd41260cbb81014d3d29ca007a15f3b1807d4e9ff288e",
+                   "README.md":  "399c2d2e00e4581ee4ef33034089992401e10c4e917a33cd363b80dfb283e964"
+               }
+}

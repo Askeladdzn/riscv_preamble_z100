@@ -1,0 +1,16 @@
+﻿group,frames,targets,detections,hits,misses,extras,complete_frames,false_alarm_frames,clipped_frames,clipped_samples,weak_targets,weak_hits,recall,precision,complete_frame_rate,false_alarm_frame_rate
+boundary_capacity,6,30,24,24,6,0,0,0,0,0,0,0,0.8,1.0,0.0,0.0
+boundary_cross,6,0,0,0,0,0,6,0,0,0,0,0,,,1.0,0.0
+boundary_overlap,6,12,7,7,5,0,1,0,0,0,0,0,0.5833333333333334,1.0,0.16666666666666666,0.0
+boundary_similar,6,0,4,0,0,4,2,4,0,0,0,0,,0.0,0.3333333333333333,0.6666666666666666
+core,480,1200,1200,1200,0,0,480,0,5,5,0,0,1.0,1.0,1.0,0.0
+negative_impulse,100,0,0,0,0,0,100,0,0,0,0,0,,,1.0,0.0
+negative_noise,200,0,0,0,0,0,200,0,5,5,0,0,,,1.0,0.0
+negative_other,200,0,0,0,0,0,200,0,0,0,0,0,,,1.0,0.0
+negative_payload,400,0,0,0,0,0,400,0,0,0,0,0,,,1.0,0.0
+negative_tone,100,0,0,0,0,0,100,0,0,0,0,0,,,1.0,0.0
+stress_dc,40,120,74,74,46,0,24,0,0,0,0,0,0.6166666666666667,1.0,0.6,0.0
+stress_impulse,40,120,87,87,33,0,21,0,10,10,0,0,0.725,1.0,0.525,0.0
+stress_ratio,40,80,66,66,14,0,26,0,0,0,40,26,0.825,1.0,0.65,0.0
+stress_snr,40,120,58,58,62,0,16,0,1,1,0,0,0.48333333333333334,1.0,0.4,0.0
+stress_tone,40,120,74,74,46,0,24,0,0,0,0,0,0.6166666666666667,1.0,0.6,0.0

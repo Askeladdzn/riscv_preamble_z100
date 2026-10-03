@@ -1,0 +1,43 @@
+{
+  "version": "v1",
+  "source_run": "stage5_all_20260925_111610_529972",
+  "selection": "all recorded performance trials with n=1024; original record objects unchanged",
+  "source_indices": [
+    1040,
+    1055,
+    1059,
+    1079,
+    1085,
+    1102,
+    1108,
+    1119,
+    1129,
+    1138,
+    1150,
+    1160,
+    1172,
+    1190,
+    1201,
+    1205,
+    1222,
+    1232,
+    1236,
+    1256,
+    1262,
+    1274,
+    1285,
+    1296,
+    1302,
+    1317,
+    1326,
+    1344,
+    1349,
+    1364
+  ],
+  "source_sha256": {
+    "plan.json": "8984a7a3042b3ef645b647574b365aff55e1eacfbd4f4fc48fa334521c4617ba",
+    "responses.jsonl": "b33a40fbd5be62b8be4602f9acb5d20c8931403d82f8e2666c9a788b6c1d3431"
+  },
+  "original_records": 1396,
+  "selected_records": 30
+}

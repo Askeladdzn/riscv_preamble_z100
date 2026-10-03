@@ -1,0 +1,3 @@
+﻿mode,repeats,case_id,software_cycles_min,software_cycles_median,software_cycles_max,hardware_total_cycles_min,hardware_total_cycles_median,hardware_total_cycles_max,core_cycles_min,core_cycles_median,core_cycles_max,host_ms_min,host_ms_median,host_ms_max,software_baseline_ms,hardware_ms,core_ms,speedup,software_measured_in_request
+multi_verify,30,core_q4_s6_r00,4633579,4633579.0,4633579,111620,111620.0,111620,80731,80731.0,80731,327.75800000000004,327.92269999999996,328.0675,92.67158,2.2324,1.61462,41.51208564773338,True
+multi_fast,30,core_q4_s6_r00,,,,111640,111640.0,111640,80731,80731.0,80731,205.5652,205.73195,205.90200000000002,92.67158,2.2328,1.61462,41.50464887137227,False

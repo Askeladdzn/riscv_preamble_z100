@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "physical_board": true,
+  "phase": "recovery",
+  "label": "clean_reprogram",
+  "build_id": "0000A501",
+  "port": "COM9",
+  "baud": 115200,
+  "clock_hz": 50000000,
+  "timestamp": "2026-09-25T09:12:17.336784+00:00",
+  "fresh": true,
+  "error": null,
+  "transactions": 309,
+  "detection_frames": 30,
+  "windows_compared": 15003,
+  "windows_evaluated": 16926,
+  "fast_frames": 3,
+  "traced_windows": 15900,
+  "rejected_requests": 0,
+  "legacy_dots": 1,
+  "receive_timeouts": 0,
+  "multi_groups": [
+    {
+      "group": "multi_recovery",
+      "frames": 13,
+      "targets": 32,
+      "hits": 31,
+      "misses": 1,
+      "false_alarms": 0
+    }
+  ],
+  "curve": [],
+  "negative_frames": 0,
+  "false_alarms": 0,
+  "position_frames": 0,
+  "position_hits": 0,
+  "performance": [],
+  "elapsed_seconds": 19.07166320000033
+}

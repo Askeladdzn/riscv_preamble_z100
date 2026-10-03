@@ -1,0 +1,113 @@
+{
+  "schema": 1,
+  "name": "application_preamble_v1",
+  "build_id": "0000A501",
+  "seed_namespace": "a602_20260925_final_packets",
+  "length": 1024,
+  "preamble_length": 64,
+  "payload_length": 128,
+  "threshold": "0.70",
+  "capacity": 4,
+  "core_amplitudes": [
+    128,
+    256,
+    512,
+    768
+  ],
+  "core_snr_db": [
+    6,
+    12
+  ],
+  "core_repeats_per_count_snr": 60,
+  "tone_frequencies_cycles_per_sample": [
+    0.015625,
+    0.0625,
+    0.125,
+    0.25,
+    0.375
+  ],
+  "tone_amplitudes": [
+    128,
+    256,
+    512,
+    1024,
+    1536
+  ],
+  "tone_phases": [
+    0,
+    1.5707963267948966,
+    3.141592653589793,
+    4.71238898038469
+  ],
+  "negative_noise_sigmas": [
+    32,
+    64,
+    128,
+    256,
+    512
+  ],
+  "stress_snr_db": [
+    -6,
+    -3,
+    0,
+    3,
+    6
+  ],
+  "stress_dc_ratios": [
+    0,
+    0.25,
+    0.5,
+    1,
+    2
+  ],
+  "stress_amplitude_ratios": [
+    1,
+    2,
+    4,
+    6,
+    8
+  ],
+  "stress_sir_db": [
+    null,
+    12,
+    6,
+    0,
+    -6
+  ],
+  "stress_impulse_probabilities": [
+    0,
+    0.00390625,
+    0.0078125,
+    0.015625,
+    0.03125
+  ],
+  "performance_case": "core_q4_s6_r00",
+  "performance_repeats": 30,
+  "trace_cases": [
+    "core_q1_s6_r00",
+    "core_q2_s6_r00",
+    "core_q3_s6_r00",
+    "core_q4_s6_r00",
+    "negative_payload_000",
+    "negative_other_000",
+    "negative_tone_000",
+    "negative_impulse_000",
+    "stress_snr_l0_r00",
+    "stress_dc_l4_r00",
+    "stress_ratio_l4_r00",
+    "stress_tone_l4_r00",
+    "stress_impulse_l4_r00",
+    "boundary_capacity_00",
+    "boundary_cross_0_0",
+    "boundary_cross_0_1",
+    "boundary_overlap_00",
+    "boundary_similar_00"
+  ],
+  "gates": {
+    "core_each_group_recall_min": 0.98,
+    "core_each_group_precision_min": 0.99,
+    "negative_frame_false_alarm_rate_max": 0.01
+  },
+  "snr_definition": "Per-preamble clean component energy / AWGN energy before quantization and clipping; interference is reported separately.",
+  "sample_model": "One real sample per symbol after assumed timing/carrier recovery; no RF or continuous-stream claim."
+}

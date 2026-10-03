@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Sep 25 16:39:04 2026
+# Process ID: 30852
+# Current directory: E:/zynq 资料/【正点原子】Z100 ZYNQ7035 7045 7100开发板资料盘（A盘）/Z100 ZYNQ开发板资料盘（A盘）
+# Command line: vivado.exe -mode batch -source E:\biancheng\vscode\Z100\FPGA\fpga_competition_2026\build\build_detection_a5.tcl -tclargs 0000A501 -log E:\biancheng\vscode\Z100\FPGA\fpga_competition_2026\build\logs\detection_0000A501_build.log -journal E:\biancheng\vscode\Z100\FPGA\fpga_competition_2026\build\logs\detection_0000A501_build.jou
+# Log file: E:/zynq 资料/【正点原子】Z100 ZYNQ7035 7045 7100开发板资料盘（A盘）/Z100 ZYNQ开发板资料盘（A盘）/vivado.log
+# Journal file: E:/zynq 资料/【正点原子】Z100 ZYNQ7035 7045 7100开发板资料盘（A盘）/Z100 ZYNQ开发板资料盘（A盘）\vivado.jou
+# Running On: zhangbo, OS: Windows, CPU Frequency: 2495 MHz, CPU Physical cores: 32, Host memory: 33605 MB
+#-----------------------------------------------------------
+source {E:\biancheng\vscode\Z100\FPGA\fpga_competition_2026\build\build_detection_a5.tcl}
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# set version [lindex $argv 0]
+# if {![regexp {^[0-9A-Fa-f]{8}$} $version]} { error "Expected eight hexadecimal build ID digits" }
+# set work [file join $root build work riscv_$version]
+# set reports [file join $root build reports riscv_$version]
+# file mkdir $work
+# file mkdir $reports
+# file copy -force [file join $root build firmware $version firmware.hex] [file join $work firmware.hex]
+# cd $work
+# create_project -force riscv_$version $work -part xc7z100ffg900-2
+# read_verilog [file join $root third_party picorv32 picorv32.v]
+# foreach name {uart_rx.v uart_tx.v dot_accel.v peak_selector.v window_multi_accel.v riscv_multi_soc.v riscv_top.v} { read_verilog [file join $root src rtl $name] }
+# add_files [file join $work firmware.hex]
+# read_xdc [file join $root board riscv.xdc]
+# synth_design -top riscv_top -part xc7z100ffg900-2
+Command: synth_design -top riscv_top -part xc7z100ffg900-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z100'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z100'
+INFO: [Device 21-403] Loading part xc7z100ffg900-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 11976
+ERROR: [Synth 8-10936] loop variable declaration is not allowed in this mode of Verilog [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/src/rtl/window_multi_accel.v:20]
+INFO: [Synth 8-10285] module 'window_multi_accel' is ignored due to previous errors [E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/src/rtl/window_multi_accel.v:225]
+INFO: [Synth 8-9084] Verilog file 'E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/src/rtl/window_multi_accel.v' ignored due to errors
+Failed to read verilog 'E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/src/rtl/window_multi_accel.v'
+INFO: [Common 17-83] Releasing license: Synthesis
+8 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 25 16:39:24 2026...

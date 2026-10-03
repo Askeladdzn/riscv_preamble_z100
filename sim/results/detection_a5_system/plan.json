@@ -1,0 +1,1169 @@
+[
+  {
+    "name": "start_info",
+    "kind": "info",
+    "command": 1,
+    "seq": 65000,
+    "tx_hex": "525645430101e8fd0000000040d94c45",
+    "response_bytes": 48,
+    "reset_before": false
+  },
+  {
+    "name": "single_window_low_amplitude",
+    "kind": "detect",
+    "command": 6,
+    "seq": 65001,
+    "tx_hex": "525645430106e9fd840000004000000001000100ffff01000100010001000100ffffffffffff010001000100ffffffff01000100ffffffffffffffff01000100ffff010001000100ffffffffffff0100ffff01000100ffffffff0100ffff0100ffff0100ffffffff0100ffff0100ffff0100ffffffff0100ffffffff0100ffffffff010001000100ffffffffffff0100bff82d1e",
+    "response_bytes": 128,
+    "reset_before": false,
+    "group": "correctness",
+    "expected_position": 0,
+    "expected_polarity": 1,
+    "clipped_samples": 0
+  },
+  {
+    "name": "single_window_low_amplitude_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65002,
+    "tx_hex": "525645430104eafd04000000000001004c7f818a",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 0,
+    "count": 1
+  },
+  {
+    "name": "sample_limits_negative_polarity",
+    "kind": "detect",
+    "command": 6,
+    "seq": 65003,
+    "tx_hex": "525645430106ebfd840000004000000000f800f8ff0700f800f800f800f800f8ff07ff07ff0700f800f800f8ff07ff0700f800f8ff07ff07ff07ff0700f800f8ff0700f800f800f8ff07ff07ff0700f8ff0700f800f8ff07ff0700f8ff0700f8ff0700f8ff07ff0700f8ff0700f8ff0700f8ff07ff0700f8ff07ff0700f8ff07ff0700f800f800f8ff07ff07ff0700f8dafca859",
+    "response_bytes": 128,
+    "reset_before": false,
+    "group": "correctness",
+    "expected_position": 0,
+    "expected_polarity": -1,
+    "clipped_samples": 0
+  },
+  {
+    "name": "sample_limits_negative_polarity_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65004,
+    "tx_hex": "525645430104ecfd04000000000001000b0f9f87",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 0,
+    "count": 1
+  },
+  {
+    "name": "mode_3_64",
+    "kind": "detect",
+    "command": 3,
+    "seq": 65005,
+    "tx_hex": "525645430103edfd840000004000000003023f01d7ff8e000b01800121018401feffdcfe62ffe9010e005f0157ff04ffc400dc00fafe07ff5cffabfe5500c50057fe4001a0001e018affabfdd3fd390134ffac0028011800eafea40079ff900126ff9e00cbfe69fe720188fe710035ffe40194fe94feab0162feeafe37019efec2feba01f000700156fe07fe97fe0202e6e0adf0",
+    "response_bytes": 128,
+    "reset_before": false,
+    "group": "correctness",
+    "expected_positions": [
+      0
+    ],
+    "expected_position": 0,
+    "snr_db": 6,
+    "seed": 2734751809,
+    "clipped_samples": 0,
+    "mode": "mixed"
+  },
+  {
+    "name": "mode_3_64_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65006,
+    "tx_hex": "525645430104eefd040000000000010036df6a83",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 0,
+    "count": 1
+  },
+  {
+    "name": "mode_5_64",
+    "kind": "detect",
+    "command": 5,
+    "seq": 65007,
+    "tx_hex": "525645430105effd840000004000000003023f01d7ff8e000b01800121018401feffdcfe62ffe9010e005f0157ff04ffc400dc00fafe07ff5cffabfe5500c50057fe4001a0001e018affabfdd3fd390134ffac0028011800eafea40079ff900126ff9e00cbfe69fe720188fe710035ffe40194fe94feab0162feeafe37019efec2feba01f000700156fe07fe97fe0202574756f7",
+    "response_bytes": 128,
+    "reset_before": false,
+    "group": "correctness",
+    "expected_positions": [
+      0
+    ],
+    "expected_position": 0,
+    "snr_db": 6,
+    "seed": 2734751809,
+    "clipped_samples": 0,
+    "mode": "mixed"
+  },
+  {
+    "name": "mode_5_64_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65008,
+    "tx_hex": "525645430104f0fd04000000000001006d6e0dba",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 0,
+    "count": 1
+  },
+  {
+    "name": "mode_6_64",
+    "kind": "detect",
+    "command": 6,
+    "seq": 65009,
+    "tx_hex": "525645430106f1fd840000004000000003023f01d7ff8e000b01800121018401feffdcfe62ffe9010e005f0157ff04ffc400dc00fafe07ff5cffabfe5500c50057fe4001a0001e018affabfdd3fd390134ffac0028011800eafea40079ff900126ff9e00cbfe69fe720188fe710035ffe40194fe94feab0162feeafe37019efec2feba01f000700156fe07fe97fe02027d7c8f66",
+    "response_bytes": 128,
+    "reset_before": false,
+    "group": "correctness",
+    "expected_positions": [
+      0
+    ],
+    "expected_position": 0,
+    "snr_db": 6,
+    "seed": 2734751809,
+    "clipped_samples": 0,
+    "mode": "mixed"
+  },
+  {
+    "name": "mode_6_64_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65010,
+    "tx_hex": "525645430104f2fd040000000000010050bef8be",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 0,
+    "count": 1
+  },
+  {
+    "name": "mode_7_64",
+    "kind": "detect",
+    "command": 7,
+    "seq": 65011,
+    "tx_hex": "525645430107f3fd840000004000000003023f01d7ff8e000b01800121018401feffdcfe62ffe9010e005f0157ff04ffc400dc00fafe07ff5cffabfe5500c50057fe4001a0001e018affabfdd3fd390134ffac0028011800eafea40079ff900126ff9e00cbfe69fe720188fe710035ffe40194fe94feab0162feeafe37019efec2feba01f000700156fe07fe97fe0202a745d478",
+    "response_bytes": 128,
+    "reset_before": false,
+    "group": "correctness",
+    "expected_positions": [
+      0
+    ],
+    "expected_position": 0,
+    "snr_db": 6,
+    "seed": 2734751809,
+    "clipped_samples": 0,
+    "mode": "mixed"
+  },
+  {
+    "name": "mode_7_64_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65012,
+    "tx_hex": "525645430104f4fd040000000000010017cee6b3",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 0,
+    "count": 1
+  },
+  {
+    "name": "mode_3_128",
+    "kind": "detect",
+    "command": 3,
+    "seq": 65013,
+    "tx_hex": "525645430103f5fd04010000800000001001c00054fe9a01fd00cc0092002a0130ff4bff30ff0a01d6004d0143ff17ff5101ecffdcfe2cffcdff44ff6e01e500adfe6a00bf01a30040ffa8ff89ffdb009dfe15012f0188fe27feff0116fffd0023ff93008eff9dff150007ff89016cfffe007efff6fe4200cdfe49ffcc0181fe9aff33010701480050fffcfea8fece011aff2fff180123ffc1feb3ffa9ff1dfff4fff2003200aefedffefbfee0ff180123ffccfede005f000800ae00b7ff70fe4c012bfe9cfffcfed80108012f01c3fed300b5ffb6ff1200280158feec0044002201f5fe5400ec01defe6d01eeffee00b3ffa301ba01c7fe3c022101fafe0c019f0115ff7efe9cfe30017c004c009bfee5345588",
+    "response_bytes": 128,
+    "reset_before": false,
+    "group": "correctness",
+    "expected_positions": [
+      0,
+      64
+    ],
+    "expected_position": null,
+    "snr_db": 6,
+    "seed": 2734751873,
+    "clipped_samples": 0,
+    "mode": "mixed"
+  },
+  {
+    "name": "mode_3_128_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65014,
+    "tx_hex": "525645430104f6fd04000000000040006e60715e",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 0,
+    "count": 64
+  },
+  {
+    "name": "mode_3_128_trace_64",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65015,
+    "tx_hex": "525645430104f7fd0400000040000100292dc5c3",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 64,
+    "count": 1
+  },
+  {
+    "name": "mode_5_128",
+    "kind": "detect",
+    "command": 5,
+    "seq": 65016,
+    "tx_hex": "525645430105f8fd04010000800000001001c00054fe9a01fd00cc0092002a0130ff4bff30ff0a01d6004d0143ff17ff5101ecffdcfe2cffcdff44ff6e01e500adfe6a00bf01a30040ffa8ff89ffdb009dfe15012f0188fe27feff0116fffd0023ff93008eff9dff150007ff89016cfffe007efff6fe4200cdfe49ffcc0181fe9aff33010701480050fffcfea8fece011aff2fff180123ffc1feb3ffa9ff1dfff4fff2003200aefedffefbfee0ff180123ffccfede005f000800ae00b7ff70fe4c012bfe9cfffcfed80108012f01c3fed300b5ffb6ff1200280158feec0044002201f5fe5400ec01defe6d01eeffee00b3ffa301ba01c7fe3c022101fafe0c019f0115ff7efe9cfe30017c004c009bfe480ccdc3",
+    "response_bytes": 128,
+    "reset_before": false,
+    "group": "correctness",
+    "expected_positions": [
+      0,
+      64
+    ],
+    "expected_position": null,
+    "snr_db": 6,
+    "seed": 2734751873,
+    "clipped_samples": 0,
+    "mode": "mixed"
+  },
+  {
+    "name": "mode_5_128_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65017,
+    "tx_hex": "525645430104f9fd0400000000004000e33b7aaf",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 0,
+    "count": 64
+  },
+  {
+    "name": "mode_5_128_trace_64",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65018,
+    "tx_hex": "525645430104fafd040000004000010099a63b36",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 64,
+    "count": 1
+  },
+  {
+    "name": "mode_6_128",
+    "kind": "detect",
+    "command": 6,
+    "seq": 65019,
+    "tx_hex": "525645430106fbfd04010000800000001001c00054fe9a01fd00cc0092002a0130ff4bff30ff0a01d6004d0143ff17ff5101ecffdcfe2cffcdff44ff6e01e500adfe6a00bf01a30040ffa8ff89ffdb009dfe15012f0188fe27feff0116fffd0023ff93008eff9dff150007ff89016cfffe007efff6fe4200cdfe49ffcc0181fe9aff33010701480050fffcfea8fece011aff2fff180123ffc1feb3ffa9ff1dfff4fff2003200aefedffefbfee0ff180123ffccfede005f000800ae00b7ff70fe4c012bfe9cfffcfed80108012f01c3fed300b5ffb6ff1200280158feec0044002201f5fe5400ec01defe6d01eeffee00b3ffa301ba01c7fe3c022101fafe0c019f0115ff7efe9cfe30017c004c009bfe508e51f6",
+    "response_bytes": 128,
+    "reset_before": false,
+    "group": "correctness",
+    "expected_positions": [
+      0,
+      64
+    ],
+    "expected_position": null,
+    "snr_db": 6,
+    "seed": 2734751873,
+    "clipped_samples": 0,
+    "mode": "mixed"
+  },
+  {
+    "name": "mode_6_128_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65020,
+    "tx_hex": "525645430104fcfd0400000000004000a7f05349",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 0,
+    "count": 64
+  },
+  {
+    "name": "mode_6_128_trace_64",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65021,
+    "tx_hex": "525645430104fdfd0400000040000100e0bde7d4",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 64,
+    "count": 1
+  },
+  {
+    "name": "mode_7_128",
+    "kind": "detect",
+    "command": 7,
+    "seq": 65022,
+    "tx_hex": "525645430107fefd04010000800000001001c00054fe9a01fd00cc0092002a0130ff4bff30ff0a01d6004d0143ff17ff5101ecffdcfe2cffcdff44ff6e01e500adfe6a00bf01a30040ffa8ff89ffdb009dfe15012f0188fe27feff0116fffd0023ff93008eff9dff150007ff89016cfffe007efff6fe4200cdfe49ffcc0181fe9aff33010701480050fffcfea8fece011aff2fff180123ffc1feb3ffa9ff1dfff4fff2003200aefedffefbfee0ff180123ffccfede005f000800ae00b7ff70fe4c012bfe9cfffcfed80108012f01c3fed300b5ffb6ff1200280158feec0044002201f5fe5400ec01defe6d01eeffee00b3ffa301ba01c7fe3c022101fafe0c019f0115ff7efe9cfe30017c004c009bfefab65990",
+    "response_bytes": 128,
+    "reset_before": false,
+    "group": "correctness",
+    "expected_positions": [
+      0,
+      64
+    ],
+    "expected_position": null,
+    "snr_db": 6,
+    "seed": 2734751873,
+    "clipped_samples": 0,
+    "mode": "mixed"
+  },
+  {
+    "name": "mode_7_128_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65023,
+    "tx_hex": "525645430104fffd0400000000004000a44b64a2",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 0,
+    "count": 64
+  },
+  {
+    "name": "mode_7_128_trace_64",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65024,
+    "tx_hex": "52564543010400fe04000000400001000c86d808",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 64,
+    "count": 1
+  },
+  {
+    "name": "fast_zero",
+    "kind": "detect",
+    "command": 7,
+    "seq": 65025,
+    "tx_hex": "52564543010701fe84000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d916d194",
+    "response_bytes": 128,
+    "reset_before": false,
+    "group": "correctness"
+  },
+  {
+    "name": "fast_zero_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65026,
+    "tx_hex": "52564543010402fe04000000000001000c0e3997",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 0,
+    "count": 1
+  },
+  {
+    "name": "multi_edge_0",
+    "kind": "detect",
+    "command": 8,
+    "seq": 65027,
+    "tx_hex": "52564543010803fe84000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d513cbb9",
+    "response_bytes": 240,
+    "reset_before": false,
+    "group": "multi_sim",
+    "expected_positions": [],
+    "expected_position": null,
+    "snr_db": 6,
+    "seed": 1,
+    "clipped_samples": 0
+  },
+  {
+    "name": "multi_edge_0_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65028,
+    "tx_hex": "52564543010404fe04000000000001004b7e279a",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 0,
+    "count": 1
+  },
+  {
+    "name": "multi_edge_1",
+    "kind": "detect",
+    "command": 8,
+    "seq": 65029,
+    "tx_hex": "52564543010805fe84000000400000000001000100ff0001000100010001000100ff00ff00ff00010001000100ff00ff0001000100ff00ff00ff00ff0001000100ff00010001000100ff00ff00ff000100ff0001000100ff00ff000100ff000100ff000100ff00ff000100ff000100ff000100ff00ff000100ff00ff000100ff00ff00010001000100ff00ff00ff0001cc1996d7",
+    "response_bytes": 240,
+    "reset_before": false,
+    "group": "multi_sim",
+    "expected_positions": [
+      0
+    ],
+    "expected_position": 0,
+    "snr_db": 6,
+    "seed": 1,
+    "clipped_samples": 0
+  },
+  {
+    "name": "multi_edge_1_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65030,
+    "tx_hex": "52564543010406fe040000000000010076aed29e",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 0,
+    "count": 1
+  },
+  {
+    "name": "multi_edge_2",
+    "kind": "detect",
+    "command": 8,
+    "seq": 65031,
+    "tx_hex": "52564543010807fe04010000800000000001000100ff0001000100010001000100ff00ff00ff00010001000100ff00ff0001000100ff00ff00ff00ff0001000100ff00010001000100ff00ff00ff000100ff0001000100ff00ff000100ff000100ff000100ff00ff000100ff000100ff000100ff00ff000100ff00ff000100ff00ff00010001000100ff00ff00ff000100ff00ff000100ff00ff00ff00ff00ff00010001000100ff00ff00ff0001000100ff00ff000100010001000100ff00ff000100ff00ff00ff00010001000100ff000100ff00ff0001000100ff000100ff000100ff0001000100ff000100ff000100ff0001000100ff0001000100ff0001000100ff00ff00ff00010001000100fff8005fdb",
+    "response_bytes": 240,
+    "reset_before": false,
+    "group": "multi_sim",
+    "expected_positions": [
+      0,
+      64
+    ],
+    "expected_position": null,
+    "snr_db": 6,
+    "seed": 1,
+    "clipped_samples": 0
+  },
+  {
+    "name": "multi_edge_2_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65032,
+    "tx_hex": "52564543010408fe040000000000400081e07969",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 0,
+    "count": 64
+  },
+  {
+    "name": "multi_edge_2_trace_64",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65033,
+    "tx_hex": "52564543010409fe0400000040000100c6adcdf4",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 64,
+    "count": 1
+  },
+  {
+    "name": "multi_edge_3",
+    "kind": "detect",
+    "command": 8,
+    "seq": 65034,
+    "tx_hex": "5256454301080afe84010000c00000000001000100ff0001000100010001000100ff00ff00ff00010001000100ff00ff0001000100ff00ff00ff00ff0001000100ff00010001000100ff00ff00ff000100ff0001000100ff00ff000100ff000100ff000100ff00ff000100ff000100ff000100ff00ff000100ff00ff000100ff00ff00010001000100ff00ff00ff000100ff00ff000100ff00ff00ff00ff00ff00010001000100ff00ff00ff0001000100ff00ff000100010001000100ff00ff000100ff00ff00ff00010001000100ff000100ff00ff0001000100ff000100ff000100ff0001000100ff000100ff000100ff0001000100ff0001000100ff0001000100ff00ff00ff00010001000100ff0001000100ff0001000100010001000100ff00ff00ff00010001000100ff00ff0001000100ff00ff00ff00ff0001000100ff00010001000100ff00ff00ff000100ff0001000100ff00ff000100ff000100ff000100ff00ff000100ff000100ff000100ff00ff000100ff00ff000100ff00ff00010001000100ff00ff00ff0001b4bd32c6",
+    "response_bytes": 240,
+    "reset_before": false,
+    "group": "multi_sim",
+    "expected_positions": [
+      0,
+      64,
+      128
+    ],
+    "expected_position": null,
+    "snr_db": 6,
+    "seed": 1,
+    "clipped_samples": 0
+  },
+  {
+    "name": "multi_edge_3_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65035,
+    "tx_hex": "5256454301040bfe0400000000004000825b4e82",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 0,
+    "count": 64
+  },
+  {
+    "name": "multi_edge_3_trace_64",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65036,
+    "tx_hex": "5256454301040cfe0400000040004000c61886fb",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 64,
+    "count": 64
+  },
+  {
+    "name": "multi_edge_3_trace_128",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65037,
+    "tx_hex": "5256454301040dfe0400000080000100bae36b8b",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 128,
+    "count": 1
+  },
+  {
+    "name": "multi_edge_4",
+    "kind": "detect",
+    "command": 8,
+    "seq": 65038,
+    "tx_hex": "5256454301080efe04020000000100000001000100ff0001000100010001000100ff00ff00ff00010001000100ff00ff0001000100ff00ff00ff00ff0001000100ff00010001000100ff00ff00ff000100ff0001000100ff00ff000100ff000100ff000100ff00ff000100ff000100ff000100ff00ff000100ff00ff000100ff00ff00010001000100ff00ff00ff000100ff00ff000100ff00ff00ff00ff00ff00010001000100ff00ff00ff0001000100ff00ff000100010001000100ff00ff000100ff00ff00ff00010001000100ff000100ff00ff0001000100ff000100ff000100ff0001000100ff000100ff000100ff0001000100ff0001000100ff0001000100ff00ff00ff00010001000100ff0001000100ff0001000100010001000100ff00ff00ff00010001000100ff00ff0001000100ff00ff00ff00ff0001000100ff00010001000100ff00ff00ff000100ff0001000100ff00ff000100ff000100ff000100ff00ff000100ff000100ff000100ff00ff000100ff00ff000100ff00ff00010001000100ff00ff00ff000100ff00ff000100ff00ff00ff00ff00ff00010001000100ff00ff00ff0001000100ff00ff000100010001000100ff00ff000100ff00ff00ff00010001000100ff000100ff00ff0001000100ff000100ff000100ff0001000100ff000100ff000100ff0001000100ff0001000100ff0001000100ff00ff00ff00010001000100ffb4264b71",
+    "response_bytes": 240,
+    "reset_before": false,
+    "group": "multi_sim",
+    "expected_positions": [
+      0,
+      64,
+      128,
+      192
+    ],
+    "expected_position": null,
+    "snr_db": 6,
+    "seed": 1,
+    "clipped_samples": 0
+  },
+  {
+    "name": "multi_edge_4_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65039,
+    "tx_hex": "5256454301040ffe0400000000004000f8fba58b",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 0,
+    "count": 64
+  },
+  {
+    "name": "multi_edge_4_trace_64",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65040,
+    "tx_hex": "52564543010410fe0400000040004000a07914c6",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 64,
+    "count": 64
+  },
+  {
+    "name": "multi_edge_4_trace_128",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65041,
+    "tx_hex": "52564543010411fe040000008000400098fc9b5f",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 128,
+    "count": 64
+  },
+  {
+    "name": "multi_edge_4_trace_192",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65042,
+    "tx_hex": "52564543010412fe04000000c0000100e261dac6",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 192,
+    "count": 1
+  },
+  {
+    "name": "multi_edge_5",
+    "kind": "detect",
+    "command": 8,
+    "seq": 65043,
+    "tx_hex": "52564543010813fe04020000000100000001000100ff0001000100010001000100ff00ff00ff00010001000100ff00ff0001000100ff00ff00ff00ff0001000100ff00010001000100ff00ff00ff000100ff0001000100ff00ff000100ff000100ff000100ff00ff000100ff000100ff000100ff00ff000100ff00ff000100ff00ff00010001000100ff00ff00ff00010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff00ff000100ff00ff00ff00ff00ff00010001000100ff00ff00ff0001000100ff00ff000100010001000100ff00ff000100ff00ff00ff00010001000100ff000100ff00ff0001000100ff000100ff000100ff0001000100ff000100ff000100ff0001000100ff0001000100ff0001000100ff00ff00ff00010001000100ff8ce4aa01",
+    "response_bytes": 240,
+    "reset_before": false,
+    "group": "multi_sim",
+    "expected_positions": [
+      0,
+      192
+    ],
+    "expected_position": null,
+    "snr_db": 6,
+    "seed": 1,
+    "clipped_samples": 0
+  },
+  {
+    "name": "multi_edge_5_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65044,
+    "tx_hex": "52564543010414fe0400000000004000e781eb54",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 0,
+    "count": 64
+  },
+  {
+    "name": "multi_edge_5_trace_64",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65045,
+    "tx_hex": "52564543010415fe0400000040004000e4b23d20",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 64,
+    "count": 64
+  },
+  {
+    "name": "multi_edge_5_trace_128",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65046,
+    "tx_hex": "52564543010416fe0400000080004000e1e747bd",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 128,
+    "count": 64
+  },
+  {
+    "name": "multi_edge_5_trace_192",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65047,
+    "tx_hex": "52564543010417fe04000000c0000100a6aaf320",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 192,
+    "count": 1
+  },
+  {
+    "name": "multi_edge_6",
+    "kind": "detect",
+    "command": 8,
+    "seq": 65048,
+    "tx_hex": "52564543010818fe040200000001000000000001000100ff0001000100010001000100ff00ff00ff00010001000100ff00ff0001000100ff00ff00ff00ff0001000100ff00010001000100ff00ff00ff000100ff0001000100ff00ff000100ff000100ff000100ff00ff000100ff000100ff000100ff00ff000100ff00ff000100ff00ff00010001000100ff00ff00ff000100ff00ff000100ff00ff00ff00ff00ff00010001000100ff00ff00ff0001000100ff00ff000100010001000100ff00ff000100ff00ff00ff00010001000100ff000100ff00ff0001000100ff000100ff000100ff0001000100ff000100ff000100ff0001000100ff0001000100ff0001000100ff00ff00ff00010001000100ff0001000100ff0001000100010001000100ff00ff00ff00010001000100ff00ff0001000100ff00ff00ff00ff0001000100ff00010001000100ff00ff00ff000100ff0001000100ff00ff000100ff000100ff000100ff00ff000100ff000100ff000100ff00ff000100ff00ff000100ff00ff00010001000100ff00ff00ff0001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000f8389e5d",
+    "response_bytes": 240,
+    "reset_before": false,
+    "group": "multi_sim",
+    "expected_positions": [
+      1,
+      65,
+      129
+    ],
+    "expected_position": null,
+    "snr_db": 6,
+    "seed": 1,
+    "clipped_samples": 0
+  },
+  {
+    "name": "multi_edge_6_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65049,
+    "tx_hex": "52564543010419fe0400000000004000570a15a1",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 0,
+    "count": 64
+  },
+  {
+    "name": "multi_edge_6_trace_64",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65050,
+    "tx_hex": "5256454301041afe040000004000400069e936d1",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 64,
+    "count": 64
+  },
+  {
+    "name": "multi_edge_6_trace_128",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65051,
+    "tx_hex": "5256454301041bfe0400000080004000516cb948",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 128,
+    "count": 64
+  },
+  {
+    "name": "multi_edge_6_trace_192",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65052,
+    "tx_hex": "5256454301041cfe04000000c0000100515113d8",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 192,
+    "count": 1
+  },
+  {
+    "name": "multi_edge_7",
+    "kind": "detect",
+    "command": 8,
+    "seq": 65053,
+    "tx_hex": "5256454301081dfe04020000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000100ff0001000100010001000100ff00ff00ff00010001000100ff00ff0001000100ff00ff00ff00ff0001000100ff00010001000100ff00ff00ff000100ff0001000100ff00ff000100ff000100ff000100ff00ff000100ff000100ff000100ff00ff000100ff00ff000100ff00ff00010001000100ff00ff00ff000100ff00ff000100ff00ff00ff00ff00ff00010001000100ff00ff00ff0001000100ff00ff000100010001000100ff00ff000100ff00ff00ff00010001000100ff000100ff00ff0001000100ff000100ff000100ff0001000100ff000100ff000100ff0001000100ff0001000100ff0001000100ff00ff00ff00010001000100ff0001000100ff0001000100010001000100ff00ff00ff00010001000100ff00ff0001000100ff00ff00ff00ff0001000100ff00010001000100ff00ff00ff000100ff0001000100ff00ff000100ff000100ff000100ff00ff000100ff000100ff000100ff00ff000100ff00ff000100ff00ff00010001000100ff00ff00ff00010000f8429882",
+    "response_bytes": 240,
+    "reset_before": false,
+    "group": "multi_sim",
+    "expected_positions": [
+      63,
+      127,
+      191
+    ],
+    "expected_position": null,
+    "snr_db": 6,
+    "seed": 1,
+    "clipped_samples": 0
+  },
+  {
+    "name": "multi_edge_7_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65054,
+    "tx_hex": "5256454301041efe04000000000040002e11c943",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 0,
+    "count": 64
+  },
+  {
+    "name": "multi_edge_7_trace_64",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65055,
+    "tx_hex": "5256454301041ffe04000000400040002d221f37",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 64,
+    "count": 64
+  },
+  {
+    "name": "multi_edge_7_trace_128",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65056,
+    "tx_hex": "52564543010420fe04000000800040009e15aad8",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 128,
+    "count": 64
+  },
+  {
+    "name": "multi_edge_7_trace_192",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65057,
+    "tx_hex": "52564543010421fe04000000c0000100d9581e45",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 192,
+    "count": 1
+  },
+  {
+    "name": "multi_fast",
+    "kind": "detect",
+    "command": 9,
+    "seq": 65058,
+    "tx_hex": "52564543010922fe04020000000100009101fd00d7fecf019a016d01cf004301e8ffbeffc4fe95019401a60003fffbff4001b300cfff16ffa4ffaafed1000501b5fff40026029e001effa7fefafe180055fe5101200115ff6afebb0056fe850162fedb01f9fe30ff4a0132ff2201b8fe5a0045fe61fffa004cffaaff56005cfee8ff8c001b012a010efe23ff73ff200037ffd2fec7001bff71fe45ff34ff74fe0e017a0102024dffd3ffbefe5d01a800e9fe05007101a8002e00400105ff0bff5c01d6ffecfed5fe1c02d600140123ff410026ffa9ffb300500177fe430087ffc2016eff4001530050ff1c01c5fd77014bffb201b600c5feb0006b00cdfef000d700e8fec1fedaff2901110003024eff7800030173fe0600ec008200ee007701fdfe7bfec9febc01c70039013efe4fffd600b30053fee5fe6eff81ff4b014e0155feb2005b017400ebfd16ff4efe9001e7feed00690146fef1fe8301fbffd60066ff54009bfed2fe590018fe7d0127ff4e01c0fe5affba00a5fe51ff3a0158fec6fe1c01be001b014fff52febdfebd018aff7dfe5f00e8fe56ffe7fe26ffc9fed7003b005e0109ff6efe34ffd300320193ff2dff16018e00ae0095016bff70ff720091ff40fffffe06010d01ab00f0fe7d01fcfedcfe85004a013fffa401f9fe6c005bff3401d800effe9f00efffafff68ffd4019a01c1ff6501f600a5fff2ffb100f4fec9ffc9fe99018a015f0150fe672c2b9c",
+    "response_bytes": 240,
+    "reset_before": false,
+    "group": "correctness",
+    "expected_positions": [
+      0,
+      64,
+      128,
+      192
+    ],
+    "expected_position": null,
+    "snr_db": 6,
+    "seed": 2734752001,
+    "clipped_samples": 0,
+    "mode": "mixed"
+  },
+  {
+    "name": "multi_fast_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65059,
+    "tx_hex": "52564543010423fe0400000000004000a618c4de",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 0,
+    "count": 64
+  },
+  {
+    "name": "multi_fast_trace_64",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65060,
+    "tx_hex": "52564543010424fe0400000040004000e25b0ca7",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 64,
+    "count": 64
+  },
+  {
+    "name": "multi_fast_trace_128",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65061,
+    "tx_hex": "52564543010425fe0400000080004000dade833e",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 128,
+    "count": 64
+  },
+  {
+    "name": "multi_fast_trace_192",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65062,
+    "tx_hex": "52564543010426fe04000000c0000100a043c2a7",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 192,
+    "count": 1
+  },
+  {
+    "name": "single_after_multi",
+    "kind": "detect",
+    "command": 6,
+    "seq": 65063,
+    "tx_hex": "52564543010627fe04010000800000001001c00054fe9a01fd00cc0092002a0130ff4bff30ff0a01d6004d0143ff17ff5101ecffdcfe2cffcdff44ff6e01e500adfe6a00bf01a30040ffa8ff89ffdb009dfe15012f0188fe27feff0116fffd0023ff93008eff9dff150007ff89016cfffe007efff6fe4200cdfe49ffcc0181fe9aff33010701480050fffcfea8fece011aff2fff180123ffc1feb3ffa9ff1dfff4fff2003200aefedffefbfee0ff180123ffccfede005f000800ae00b7ff70fe4c012bfe9cfffcfed80108012f01c3fed300b5ffb6ff1200280158feec0044002201f5fe5400ec01defe6d01eeffee00b3ffa301ba01c7fe3c022101fafe0c019f0115ff7efe9cfe30017c004c009bfee29f26ca",
+    "response_bytes": 128,
+    "reset_before": false,
+    "group": "correctness",
+    "expected_positions": [
+      0,
+      64
+    ],
+    "expected_position": null,
+    "snr_db": 6,
+    "seed": 2734751873,
+    "clipped_samples": 0,
+    "mode": "mixed"
+  },
+  {
+    "name": "single_after_multi_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65064,
+    "tx_hex": "52564543010428fe040000000000400051e32426",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 0,
+    "count": 64
+  },
+  {
+    "name": "single_after_multi_trace_64",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65065,
+    "tx_hex": "52564543010429fe040000004000010016ae90bb",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 64,
+    "count": 1
+  },
+  {
+    "name": "multi_zero_fast",
+    "kind": "detect",
+    "command": 9,
+    "seq": 65066,
+    "tx_hex": "5256454301092afe840000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008ab26352",
+    "response_bytes": 240,
+    "reset_before": false,
+    "group": "correctness"
+  },
+  {
+    "name": "multi_zero_fast_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65067,
+    "tx_hex": "5256454301042bfe040000000000010016267124",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 0,
+    "count": 1
+  },
+  {
+    "name": "bad_n",
+    "kind": "error",
+    "command": 3,
+    "seq": 65068,
+    "tx_hex": "5256454301032cfe820000003f000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000325d2f58",
+    "response_bytes": 24,
+    "reset_before": false,
+    "error": 2
+  },
+  {
+    "name": "bad_flags",
+    "kind": "error",
+    "command": 3,
+    "seq": 65069,
+    "tx_hex": "5256454301032dfe84000000400001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c20cb683",
+    "response_bytes": 24,
+    "reset_before": false,
+    "error": 2
+  },
+  {
+    "name": "bad_range",
+    "kind": "error",
+    "command": 3,
+    "seq": 65070,
+    "tx_hex": "5256454301032efe84000000400000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000fafb56cb",
+    "response_bytes": 24,
+    "reset_before": false,
+    "error": 9
+  },
+  {
+    "name": "legacy_bad_range",
+    "kind": "error",
+    "command": 5,
+    "seq": 65071,
+    "tx_hex": "5256454301052ffe8400000040000000fff7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a4f03ca0",
+    "response_bytes": 24,
+    "reset_before": false,
+    "error": 9
+  },
+  {
+    "name": "legacy_short",
+    "kind": "error",
+    "command": 5,
+    "seq": 65072,
+    "tx_hex": "52564543010530fe01000000215cea604f",
+    "response_bytes": 24,
+    "reset_before": false,
+    "error": 2
+  },
+  {
+    "name": "unknown_command",
+    "kind": "error",
+    "command": 113,
+    "seq": 65073,
+    "tx_hex": "52564543017131fe000000005c3eb5db",
+    "response_bytes": 24,
+    "reset_before": false,
+    "error": 3
+  },
+  {
+    "name": "trace_count",
+    "kind": "error",
+    "command": 4,
+    "seq": 65074,
+    "tx_hex": "52564543010432fe040000000000410031c3b30f",
+    "response_bytes": 24,
+    "reset_before": false,
+    "error": 2
+  },
+  {
+    "name": "bad_crc",
+    "kind": "error",
+    "command": 3,
+    "seq": 65075,
+    "tx_hex": "52564543010333fe840000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008b31f324",
+    "response_bytes": 24,
+    "reset_before": false,
+    "error": 1
+  },
+  {
+    "name": "truncated_payload",
+    "kind": "error",
+    "command": 3,
+    "seq": 65076,
+    "tx_hex": "52564543010334fe840000004000000000000000",
+    "response_bytes": 24,
+    "reset_before": false,
+    "error": 5
+  },
+  {
+    "name": "peak_6_short",
+    "kind": "error",
+    "command": 6,
+    "seq": 65077,
+    "tx_hex": "52564543010635fe010000002118c2d793",
+    "response_bytes": 24,
+    "reset_before": false,
+    "error": 2
+  },
+  {
+    "name": "peak_6_range",
+    "kind": "error",
+    "command": 6,
+    "seq": 65078,
+    "tx_hex": "52564543010636fe84000000400000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff70026a",
+    "response_bytes": 24,
+    "reset_before": false,
+    "error": 9
+  },
+  {
+    "name": "peak_7_short",
+    "kind": "error",
+    "command": 7,
+    "seq": 65079,
+    "tx_hex": "52564543010737fe0100000021afd3e2c8",
+    "response_bytes": 24,
+    "reset_before": false,
+    "error": 2
+  },
+  {
+    "name": "peak_7_range",
+    "kind": "error",
+    "command": 7,
+    "seq": 65080,
+    "tx_hex": "52564543010738fe840000004000000000080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008771c32d",
+    "response_bytes": 24,
+    "reset_before": false,
+    "error": 9
+  },
+  {
+    "name": "peak_8_short",
+    "kind": "error",
+    "command": 8,
+    "seq": 65081,
+    "tx_hex": "52564543010839fe01000000215ebafd41",
+    "response_bytes": 24,
+    "reset_before": false,
+    "error": 2
+  },
+  {
+    "name": "peak_8_range",
+    "kind": "error",
+    "command": 8,
+    "seq": 65082,
+    "tx_hex": "5256454301083afe840000004000000000080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008b74d900",
+    "response_bytes": 24,
+    "reset_before": false,
+    "error": 9
+  },
+  {
+    "name": "peak_9_short",
+    "kind": "error",
+    "command": 9,
+    "seq": 65083,
+    "tx_hex": "5256454301093bfe0100000021e9abc81a",
+    "response_bytes": 24,
+    "reset_before": false,
+    "error": 2
+  },
+  {
+    "name": "peak_9_range",
+    "kind": "error",
+    "command": 9,
+    "seq": 65084,
+    "tx_hex": "5256454301093cfe84000000400000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000cf5af429",
+    "response_bytes": 24,
+    "reset_before": false,
+    "error": 9
+  },
+  {
+    "name": "after_errors",
+    "kind": "info",
+    "command": 1,
+    "seq": 65085,
+    "tx_hex": "5256454301013dfe000000000c2e1f40",
+    "response_bytes": 48,
+    "reset_before": false
+  },
+  {
+    "name": "legacy_dot",
+    "kind": "dot",
+    "command": 2,
+    "seq": 65086,
+    "tx_hex": "5256454301023efe0c0000000200000000800080ff7fff7fe2020d4b",
+    "response_bytes": 56,
+    "reset_before": false,
+    "a": [
+      -32768,
+      32767
+    ],
+    "b": [
+      -32768,
+      32767
+    ]
+  },
+  {
+    "name": "reset_info",
+    "kind": "info",
+    "command": 1,
+    "seq": 65087,
+    "tx_hex": "5256454301013ffe00000000078fd70d",
+    "response_bytes": 48,
+    "reset_before": true
+  },
+  {
+    "name": "reset_fast",
+    "kind": "detect",
+    "command": 7,
+    "seq": 65088,
+    "tx_hex": "52564543010740fe840000004000000003023f01d7ff8e000b01800121018401feffdcfe62ffe9010e005f0157ff04ffc400dc00fafe07ff5cffabfe5500c50057fe4001a0001e018affabfdd3fd390134ffac0028011800eafea40079ff900126ff9e00cbfe69fe720188fe710035ffe40194fe94feab0162feeafe37019efec2feba01f000700156fe07fe97fe0202bc2d256c",
+    "response_bytes": 128,
+    "reset_before": false,
+    "group": "correctness",
+    "expected_positions": [
+      0
+    ],
+    "expected_position": 0,
+    "snr_db": 6,
+    "seed": 2734751809,
+    "clipped_samples": 0,
+    "mode": "mixed"
+  },
+  {
+    "name": "reset_fast_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65089,
+    "tx_hex": "52564543010441fe0400000000000100afb2b4e2",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 0,
+    "count": 1
+  },
+  {
+    "name": "verify_after_fast",
+    "kind": "detect",
+    "command": 6,
+    "seq": 65090,
+    "tx_hex": "52564543010642fe04010000800000001001c00054fe9a01fd00cc0092002a0130ff4bff30ff0a01d6004d0143ff17ff5101ecffdcfe2cffcdff44ff6e01e500adfe6a00bf01a30040ffa8ff89ffdb009dfe15012f0188fe27feff0116fffd0023ff93008eff9dff150007ff89016cfffe007efff6fe4200cdfe49ffcc0181fe9aff33010701480050fffcfea8fece011aff2fff180123ffc1feb3ffa9ff1dfff4fff2003200aefedffefbfee0ff180123ffccfede005f000800ae00b7ff70fe4c012bfe9cfffcfed80108012f01c3fed300b5ffb6ff1200280158feec0044002201f5fe5400ec01defe6d01eeffee00b3ffa301ba01c7fe3c022101fafe0c019f0115ff7efe9cfe30017c004c009bfe7e01bd68",
+    "response_bytes": 128,
+    "reset_before": false,
+    "group": "correctness",
+    "expected_positions": [
+      0,
+      64
+    ],
+    "expected_position": null,
+    "snr_db": 6,
+    "seed": 2734751873,
+    "clipped_samples": 0,
+    "mode": "mixed"
+  },
+  {
+    "name": "verify_after_fast_trace_0",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65091,
+    "tx_hex": "52564543010443fe0400000000004000d61c230f",
+    "response_bytes": 532,
+    "reset_before": false,
+    "offset": 0,
+    "count": 64
+  },
+  {
+    "name": "verify_after_fast_trace_64",
+    "kind": "trace",
+    "command": 4,
+    "seq": 65092,
+    "tx_hex": "52564543010444fe0400000040000100d621899f",
+    "response_bytes": 28,
+    "reset_before": false,
+    "offset": 64,
+    "count": 1
+  },
+  {
+    "name": "finish_info",
+    "kind": "info",
+    "command": 1,
+    "seq": 65093,
+    "tx_hex": "52564543010145fe00000000a0a16ea7",
+    "response_bytes": 48,
+    "reset_before": false
+  }
+]

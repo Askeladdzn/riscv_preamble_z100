@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# xsim v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Sep 25 14:42:14 2026
+# Process ID: 34360
+# Current directory: E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/sim/work/window_a2
+# Command line: xsim.exe -log E:\biancheng\vscode\Z100\FPGA\fpga_competition_2026\sim\results\detection_a2_unit.log -mode tcl -source {xsim.dir/a2_sim/xsim_script.tcl}
+# Log file: E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/sim/results/detection_a2_unit.log
+# Journal file: E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/sim/work/window_a2\xsim.jou
+# Running On: zhangbo, OS: Windows, CPU Frequency: 2495 MHz, CPU Physical cores: 32, Host memory: 33605 MB
+#-----------------------------------------------------------
+source xsim.dir/a2_sim/xsim_script.tcl
+# xsim {a2_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+UNIT 0/3184 frames
+UNIT 200/3184 frames
+UNIT 400/3184 frames
+UNIT 600/3184 frames
+UNIT 800/3184 frames
+Fatal: FAIL: unit timeout
+Time: 1410065408 ns  Iteration: 0  Process: /tb_window_accel/Initial90_12  Scope: tb_window_accel  File: E:/biancheng/vscode/Z100/FPGA/fpga_competition_2026/sim/tb_window_accel.sv Line: 90
+$finish called at time : 1410065408 ns
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:50 . Memory (MB): peak = 207.238 ; gain = 0.000
+exit
+INFO: xsimkernel Simulation Memory Usage: 10996 KB (Peak: 10996 KB), Simulation CPU Usage: 50312 ms
+INFO: [Common 17-206] Exiting xsim at Fri Sep 25 14:43:06 2026...
